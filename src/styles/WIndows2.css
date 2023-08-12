@@ -1,0 +1,313 @@
+/* Fonte para simular Windows 1 */
+@import url('https://fonts.cdnfonts.com/css/fixedsys-62');     /* font-family: 'Fixedsys 62', sans-serif; */
+/* Fonte para simular os icones do Windows 1 */
+@import url('https://fonts.cdnfonts.com/css/cd-icons');     /* font-family: 'CD-Icons', sans-serif; */
+
+@import url('https://fonts.cdnfonts.com/css/iconbit');  /* font-family: 'IconBitOne', sans-serif; */
+
+.window2{
+    width: auto;
+    height: 100vh;
+    background-color: #56e6ff;
+    border: 7px solid gray;
+}
+    
+.system2{
+    width: auto;
+    height: 75vh;
+    border-bottom: 1px solid black;
+    background-color: #fff;
+}
+
+.windows2Header{
+    width: auto;
+    height: auto;
+    background-color: #5757d1;
+    border-bottom: 2px solid black;
+}
+
+.exit{
+    position: absolute;
+    width: 50px;
+    height: 34px;
+    font-size: 30px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.arrowUp{
+    position: absolute;
+    width: 50px;
+    height: 34px;
+    font-size: 30px;
+    background-color: #fff;
+    font-family: 'IconBitOne', sans-serif;
+    border: 1px solid black;
+    right: 7px;
+    text-align: center;
+}
+
+.arrowDown{
+    position: absolute;
+    width: 50px;
+    height: 34px;
+    font-size: 30px;
+    background-color: #fff;
+    font-family: 'IconBitOne', sans-serif;
+    border: 1px solid black;
+    right: 57px;
+    text-align: center;
+}
+
+.headerTitle{
+    position: relative;
+    left: 40%;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    background-color: black;
+}
+
+.headerTitle h1{
+    font-weight: 200;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+}
+
+.aquaTarget{
+    width: auto;
+    height: auto;
+    background-color: #56e6ff;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.menu{
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.directories{
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    position: relative;
+    font-family: 'Fixedsys 62', sans-serif;
+}
+
+.cDirectory{
+    width: 9%;
+    height: auto;
+    background-color: black;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.cDirectory h1{
+    font-weight: 200;
+}
+
+.directoryInput{
+    background-color: black;
+    width: auto;
+    padding: 0 10px;
+    height: auto;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    border: 1px solid #fff;
+}
+
+.directoryName{
+    position: absolute;
+    top: 0;
+    left: 12%;
+}
+
+.windowsDirectory{
+    position: absolute;
+    top: 0;
+    left: 220px;
+    cursor: pointer;
+    display: none;
+}
+
+.directoryName h1{
+    font-weight: 200;
+}
+
+.calcIcon{
+    position: absolute;
+    width: 45px;
+    height: auto;
+    bottom: 1.5%;
+    left: 2%;
+    cursor: pointer;
+    display: none;
+}
+
+.aplications2{
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    font-size: 30px;
+    left: 1%;
+    top: 17%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.aplications2-1{
+    left: 240px;
+    top: 0%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.aplications2 li:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px dotted white;
+}
+
+.native{
+    font-weight: 600;
+}
+
+.windowsEXE{
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    font-size: 30px;
+    left: 1%;
+    top: 17%;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+}
+
+.pif{
+    font-weight: 600;
+}
+
+.windowsEXE li:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px dotted white;
+}
+
+.win2Calc{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 65vh;
+    background-color: #5757d1;
+    border: 1px solid black;
+    display: none;
+}
+
+.calc2Header{
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    background-color: #fff;
+}
+
+.calcTitle2{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background-color: #000000;
+    left: 30%;
+}
+
+.calcTitle2 h1{
+    font-family: 'Fixedsys 62', sans-serif;
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+}
+
+.arrowDownCalc{
+    position: absolute;
+    width: 50px;
+    height: 34px;
+    font-size: 30px;
+    background-color: #fff;
+    font-family: 'IconBitOne', sans-serif;
+    border: 1px solid black;
+    right: 0;
+}
+
+.exitCalc{
+    position: absolute;
+    width: 50px;
+    height: 34px;
+    font-size: 30px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.aquaTargetCalc{
+    width: auto;
+    height: auto;
+    background-color: #56e6ff;
+    border: 1px solid black;
+    position: relative;
+}
+
+.aquaTargetCalc li{
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.keyNum2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+}
+
+.keyNum2 button{
+    font-family: 'Fixedsys 62', sans-serif;
+    width: 45%;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    top: 20px;
+    left: 25px;
+    position: relative;
+}
+
+.keyNum2 button:active{
+    background-color: black;
+    color: #fff;
+}
+
+.win2Calc input[type="text"]{
+    height: 35px;
+    width: 200px;
+    border-radius: 30px / 70px;
+    position: relative;
+    left: 100px;
+    top: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px #00000052;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-size: 30px;
+    text-align: right;
+}

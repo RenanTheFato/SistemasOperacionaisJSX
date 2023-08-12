@@ -1,0 +1,43 @@
+.main {
+    width: auto;
+    height: 100vh;
+  }
+  
+  .bgImage {
+    width: 100%;
+    height: auto;
+    z-index: -2;
+  }
+  
+  .mainTitleOS {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background-color: #ffffff27;
+    backdrop-filter: blur(5px);
+    font-family: "Ubuntu", sans-serif;
+    margin-top: 100px;
+  }
+  
+  .titleOS {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  
+  .textOS {
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-align: justify;
+  }

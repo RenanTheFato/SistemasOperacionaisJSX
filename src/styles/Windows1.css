@@ -1,0 +1,298 @@
+/* Fonte para simular Windows 1 */
+@import url('https://fonts.cdnfonts.com/css/fixedsys-62');     /* font-family: 'Fixedsys 62', sans-serif; */
+/* Fonte para simular os icones do Windows 1 */
+@import url('https://fonts.cdnfonts.com/css/cd-icons');     /* font-family: 'CD-Icons', sans-serif; */
+
+
+
+.window{
+    width: auto;
+    height: 100vh;
+    background-color: #5ff36b;
+}
+    
+.system{
+    width: auto;
+    height: 80vh;
+    border-bottom: 1px solid black;
+    background-color: #fff;
+}
+
+.windows1Header{
+    width: auto;
+    height: auto;
+    background-color: #5757d1;
+    border-bottom: 2px solid black;
+}
+
+.three{
+    position: absolute;
+    width: auto;
+    height: 34px;
+    font-family: 'CD-Icons', sans-serif;
+    font-size: 30px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.headerTitle{
+    position: relative;
+    left: 40%;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    background-color: black;
+}
+
+.headerTitle h1{
+    font-weight: 200;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+}
+
+.yellowTarget{
+    width: auto;
+    height: auto;
+    background-color: #ffff56;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.menu{
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.directories{
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    position: relative;
+    font-family: 'Fixedsys 62', sans-serif;
+}
+
+.cDirectory{
+    width: 9%;
+    height: auto;
+    background-color: black;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.cDirectory h1{
+    font-weight: 200;
+}
+
+.directoryInput{
+    background-color: black;
+    width: auto;
+    padding: 0 10px;
+    height: auto;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    border: 1px solid #fff;
+}
+
+.directoryName{
+    position: absolute;
+    top: 0;
+    left: 12%;
+}
+
+.directoryName h1{
+    font-weight: 200;
+}
+
+.aplications{
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    font-size: 30px;
+    left: 1%;
+    top: 17%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.aplications li:hover{
+    background-color: black;
+    color: #fff;
+}
+
+.con{
+    width: auto;
+    height: 80vh;
+    background-color: #e94a4a;
+    display: none;
+    border: 1px solid black;
+}
+
+.calcContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #5591e0;
+    width: 350px;
+    text-align: center;
+    border: 2px solid #071d46;
+    box-shadow: 9px 10px black;
+}
+
+.keyNum{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+}
+
+.keyNum button{
+    font-family: 'Fixedsys 62', sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.keyNum button:active{
+    background-color: black;
+    color: #fff;
+}
+
+.calcContainer input[type="text"]{
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    right: 50px;
+    border: 1px solid black;
+    box-shadow: 2px 2px #00000052;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-size: 30px;
+    text-align: right;
+}
+
+.windows1Warn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 200px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    display: none;
+}
+
+.warnHeader{
+    position: relative;
+    top: 0;
+    width: auto;
+    height: 30px;
+    background-color: #3939b6;
+    border-bottom: 1px solid black;
+}
+
+.warnTitle{
+    background-color: black;
+    width: 120px;
+    height: 30px;
+    position: relative;
+    left: 33%;
+    text-align: center;
+}
+
+.warnTitle h1{
+    font-weight: 200;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+}
+
+.warnIcon{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    top: 15%;
+    left: 5%;
+}
+
+.warnIcon h1{
+    font-weight: 200;
+    color: #fff;
+    font-size: 50px;
+}
+
+.warnText{
+    font-family: 'Fixedsys 62', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    position: absolute;
+    top: 37%;
+    left: 30%;
+ }
+
+.warnExit{
+    position: relative;
+    top: 35%;
+    left: 37%;
+    text-align: center;
+    width: 90px;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.writeContainer{
+    width: auto;
+    height: 80vh;
+    background-color: wheat;
+    border-bottom: 1px solid black;
+    display: none;
+}
+
+.writeText{
+    font-family: 'Fixedsys 62', sans-serif;
+    font-weight: 200;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 30px;
+}
+
+.chkContainer{
+    width: auto;
+    height: 80vh;
+    background-color: #ffffff;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+    display: none;
+    overflow: hidden;
+}
+
+.chkContainer li{
+    font-family: 'Fixedsys 62', sans-serif;
+    font-size: 30px;
+    font-weight: 200px;
+    position: relative;
+    top: 5%;
+    left: 5%;
+
+}
