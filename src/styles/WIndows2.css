@@ -10,6 +10,7 @@
     height: 100vh;
     background-color: #56e6ff;
     border: 7px solid gray;
+    
 }
     
 .system2{
@@ -24,6 +25,7 @@
     height: auto;
     background-color: #5757d1;
     border-bottom: 2px solid black;
+    user-select: none;
 }
 
 .exit{
@@ -80,6 +82,7 @@
     background-color: #56e6ff;
     border-bottom: 1px solid black;
     position: relative;
+    user-select: none;
 }
 
 .menu{
@@ -101,6 +104,7 @@
     background-color: #fff;
     position: relative;
     font-family: 'Fixedsys 62', sans-serif;
+    user-select: none;
 }
 
 .cDirectory{
@@ -155,6 +159,16 @@
     display: none;
 }
 
+.systemIcon{
+    position: absolute;
+    width: 45px;
+    height: auto;
+    bottom: 1.5%;
+    left: 6%;
+    cursor: pointer;
+    display: none;
+}
+
 .aplications2{
     font-family: 'Fixedsys 62', sans-serif;
     list-style-type: none;
@@ -163,6 +177,7 @@
     top: 17%;
     cursor: pointer;
     position: absolute;
+    user-select: none;
 }
 
 .aplications2-1{
@@ -170,6 +185,7 @@
     top: 0%;
     cursor: pointer;
     position: absolute;
+    user-select: none;
 }
 
 .aplications2 li:hover{
@@ -191,6 +207,7 @@
     cursor: pointer;
     position: absolute;
     display: none;
+    user-select: none;
 }
 
 .pif{
@@ -204,7 +221,7 @@
 }
 
 .win2Calc{
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -213,6 +230,7 @@
     background-color: #5757d1;
     border: 1px solid black;
     display: none;
+    user-select: none;
 }
 
 .calc2Header{

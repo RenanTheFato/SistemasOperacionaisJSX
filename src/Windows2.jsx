@@ -3,18 +3,43 @@ import "./styles/Windows2.css";
 
 function Windows2() {
   const calcIcon = "./src/assets/calculator.png"
+  const systemIcon = "./src/assets/win1icon.png"
   return (
 <>
     <div className="window2">
         <SystemHeader2 />
         <img className="calcIcon" src={calcIcon} onClick={hideCalc2} />
+        <img className="systemIcon" src={systemIcon} onClick={MsDosHide}/>
+        <Win2Calc />
         <div className="system2">
           <Screen2 />
-          <Win2Calc />
         </div>
     </div>
 </>
   );
+}
+
+function MsDosHide(){
+  const system2 = document.querySelector('.system2')
+  const SystemHeader2 = document.querySelector('.windows2Header')
+  const aquaTarget = document.querySelector('.aquaTarget')
+  const directories = document.querySelector('.directories')
+  const systemIconHide = document.querySelector('.systemIcon')
+
+
+  if (systemIconHide.style.display === 'block') {
+    systemIconHide.style.display = 'none'
+    system2.style.display = 'block'
+    SystemHeader2.style.display = 'block'
+    aquaTarget.style.display = 'block'
+    directories.style.display = 'block'
+  } else{
+    systemIconHide.style.display = 'block'
+    system2.style.display = 'none'
+    SystemHeader2.style.display = 'none'
+    aquaTarget.style.display = 'none'
+    directories.style.display = 'none'
+  }
 }
 
 function SystemHeader2() {
@@ -22,7 +47,7 @@ function SystemHeader2() {
       <>
         <div className="windows2Header">
           <button className="exit">─</button>
-          <button className="arrowDown">B</button>
+          <button className="arrowDown" onClick={MsDosHide}>B</button>
           <button className="arrowUp">A</button>
           <div className="headerTitle">
             <h1>MS-DOS Executive</h1>
@@ -83,6 +108,7 @@ function SystemHeader2() {
         <div className="windowsEXE">
             <li className="pif">PIF</li>
             <li onClick={hideCalc2}>CALC.EXE</li>
+            <li>WRITE.EXE</li>
         </div>
       </>
     );
@@ -99,9 +125,10 @@ function SystemHeader2() {
     const calcular = () =>{
       setResultado(eval(resultado).toString());
     }
+
     return(
       <>
-      <div className="win2Calc">
+      <div className="win2Calc" onMouseDown={CalcMove} onMouseUp={CalcMove} onMouseMove={CalcMove}>
         <div className="calc2Header">
         <button className="exitCalc" onClick={killCalc}>─</button>
         <button className="arrowDownCalc" onClick={hideCalc2}>B</button>
@@ -113,7 +140,7 @@ function SystemHeader2() {
             <li><u>E</u>dit</li>
           </div>
           <form>
-            <input type="text" value={resultado} />
+            <input type="text" value={resultado} readOnly />
           </form>
           <div className="keyNum2">
             <button name="8" onClick={click}>8</button>
@@ -152,6 +179,24 @@ function SystemHeader2() {
     } else {
       calcIconHide.style.display = 'none'
     };
+  }
+
+  function CalcMove(){
+    const targetDrag = document.querySelector('.win2Calc')
+    var offsetX, offsetY
+
+    const move =(e) =>{
+      targetDrag.style.left =`${e.clientX - offsetX}px`
+      targetDrag.style.top =`${e.clientY - offsetY}px`
+    }
+    targetDrag.addEventListener('mousedown', (e) =>{
+      offsetX = e.clientX - targetDrag.offsetLeft;
+      offsetY = e.clientY - targetDrag.offsetTop;
+      document.addEventListener('mousemove', move);
+    })
+    document.addEventListener('mouseup', () => {
+      document.removeEventListener('mousemove', move);
+    });
   }
 
   function killCalc() {
