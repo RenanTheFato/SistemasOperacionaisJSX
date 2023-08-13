@@ -157,7 +157,7 @@ function CHKDSK(){
     <li>15867 bytes em 2 arquivos ocultos</li>
     <li>147838 bytes em 12 arquivos do usuário</li>
     <li><br /></li>
-    <li>23539 bytes memória total</li>
+    <li>235394 bytes memória total</li>
     <li>36295 bytes livres</li>
     </div>
     </>

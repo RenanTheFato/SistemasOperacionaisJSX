@@ -194,6 +194,7 @@
     background-color: #ffffff;
     border: 1px solid black;
     display: none;
+    user-select: none
 }
 
 .warnHeader{
