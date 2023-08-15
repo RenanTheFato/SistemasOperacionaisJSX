@@ -1,0 +1,76 @@
+/* Fonte para simular Windows 3 */
+@import url('https://fonts.cdnfonts.com/css/fixedsys-62');     /* font-family: 'Fixedsys 62', sans-serif; */
+
+.system3{
+    width: auto;
+    height: 100vh;
+    background-color: #c9c9c9;
+}
+
+.programContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 65vh;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.programHeader{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #001da0;
+}
+.programTitle{
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    color: #fff;
+    position: relative;
+    left: 35%;
+}
+
+.whiteTarget{
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    position: relative;
+    user-select: none;
+    top: 5%;
+}
+
+.programMenu{
+    font-size: 25px;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.programMenu li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.accessoriesIcon{
+    position: absolute;
+    bottom: 20px;
+}
+
+.accessoriesIcon img{
+    width: 45px;
+    left: 40px;
+    position: relative;
+}
+
+.accessoriesIcon span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    bottom: 5px;
+    left: 20px;
+}

@@ -1,4 +1,4 @@
-/* Fonte para simular Windows 1 */
+/* Fonte para simular Windows 2 */
 @import url('https://fonts.cdnfonts.com/css/fixedsys-62');     /* font-family: 'Fixedsys 62', sans-serif; */
 /* Fonte para simular os icones do Windows 1 */
 @import url('https://fonts.cdnfonts.com/css/cd-icons');     /* font-family: 'CD-Icons', sans-serif; */
@@ -489,4 +489,125 @@
     font-size: 30px;
     font-weight: 200px;
     color: #fff;
+}
+
+@media (min-width: 1920px){
+    .system2{
+        height: 80vh;
+    }
+    .directoryInput{
+        left: 60px;
+    }
+    .calcIcon{
+        width: 70px;
+    }
+    .systemIcon{
+        width: 70px;
+    }
+    .writeIcon{
+        width: 70px;
+    }
+    .aplications2{
+        top: 12%;
+        font-size: 40px;
+    }
+    .aplications2-1{
+        left: 350px;
+    }
+    .windowsEXE{
+        top: 12%;
+        font-size: 40px;
+    }
+    .calc2Header{
+        height: 4vh;
+    }
+    .arrowDownCalc{
+        width: 60px;
+        height: 4vh;
+        font-size: 30px;
+    }
+    .exitCalc{
+        width: 60px;
+        height: 4vh;
+        font-size: 30px; 
+    }
+    .aquaTargetCalc li{
+        font-size: 40px;
+    }
+    .calcTitle2{
+        left: 35%;
+        height: 4vh;
+    }
+    .calcTitle2 h1{
+        position: relative;
+        top: 5px;
+        font-size: 35px;
+    }
+    .win2Calc input[type="text"]{
+        top: 40px;
+        width: 350px;
+        height: 55px;
+        left: 150px;
+        font-size: 40px;
+    }
+    .keyNum2 button{
+        top: 100px;
+        left: 40px;
+        height: 70px;
+        font-size: 40px;
+    }
+    .write2Header{
+        height: 4vh;
+    }
+    .writeTitle2{
+        left: 45%;
+        height: 4vh;
+    }
+    .writeTitle2 h1{
+        position: relative;
+        top: 5px;
+        font-size: 35px;
+    }
+    .exitWrite{
+        height: 4vh;
+        font-size: 30px;
+    }
+    .arrowDownWrite{
+        height: 4vh;
+        font-size: 30px;
+    }
+    .arrowDownWriteMin{
+        height: 4vh;
+        font-size: 30px;
+    }
+    .arrowUpWrite{
+        height: 4vh;
+        font-size: 30px;
+    }
+    .writeText2{
+        font-size: 40px;
+    }
+    .chkdskHeader2{
+        height: 4vh;
+    }
+    .exitChkdsk2{
+        width: 60px;
+        height: 4vh;
+    }
+    .chkdskTitle2{
+        left: 38%;
+        width: 200px;
+        height: 4vh;
+    }
+    .chkdskTitle2 h1{
+        position: relative;
+        top: 5px;
+        font-size: 35px;
+    }
+    .chkdskItems2{
+        top: 8%;
+    }
+    .chkdskItems2 li{
+        font-size: 40px;
+    }
 }

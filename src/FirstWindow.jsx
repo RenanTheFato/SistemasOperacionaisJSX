@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./styles/FirstWindow.css";
-import Windows1 from "./Windows1";
 import Header from "./Header"
-import Windows2 from "./Windows2"
 
 function FirstWindow({ nome }) {
   const background = "./src/assets/FirstWindowBackgroundEffect.png";
@@ -27,6 +25,7 @@ function FirstWindow({ nome }) {
         </p>
         <button><a href="/Windows1">WIN1</a></button>
         <button><a href="/Windows2">WIN2</a></button>
+        <button><a href="/Windows3">WIN3</a></button>
       </div>
     );
   }
