@@ -491,7 +491,7 @@
     color: #fff;
 }
 
-@media (min-width: 1920px){
+@media screen and (min-width: 1920px){
     .system2{
         height: 80vh;
     }
@@ -551,7 +551,7 @@
         font-size: 40px;
     }
     .keyNum2 button{
-        top: 100px;
+        top: 70px;
         left: 40px;
         height: 70px;
         font-size: 40px;
