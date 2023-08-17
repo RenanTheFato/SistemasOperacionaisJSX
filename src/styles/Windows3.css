@@ -28,6 +28,27 @@
     left: 31px;
 }
 
+.accessoriesSystemIcon{
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+
+.accessoriesSystemIcon img{
+    width: 45px;
+    left: 170px;
+    position: relative;
+    bottom: 20px;
+}
+
+.accessoriesSystemIcon span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    bottom: 5px;
+    left: 105px;
+}
+
 .programContainer{
     position: absolute;
     top: 50%;
@@ -299,7 +320,49 @@
     left: 25px;
 }
 
-.fileManagerEXE span:hover, .promptManagerEXE span:hover, .windowsSetupEXE span:hover{
+.controlPanelManagerEXE{
+    position: absolute;
+    top: 40px;
+    left: 370px;
+    cursor: pointer;
+}
+
+.controlPanelManagerEXE img{
+    position: relative;
+    width: 40px;
+    left: 25px;
+}
+
+.controlPanelManagerEXE  span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+    left: -10px;
+}
+
+.controlPrintManagerEXE{
+    position: absolute;
+    top: 40px;
+    left: 500px;
+    cursor: pointer;
+}
+
+.controlPrintManagerEXE img{
+    position: relative;
+    width: 40px;
+    left: 30px;
+}
+
+.controlPrintManagerEXE span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+}
+
+.fileManagerEXE span:hover, .promptManagerEXE span:hover, .windowsSetupEXE span:hover, 
+.controlPanelManagerEXE  span:hover, .controlPrintManagerEXE span:hover{
     background-color: #001da0;
     color: #fff;
     font-weight: 100;
@@ -331,4 +394,298 @@
     font-size: 30px;
     font-family: 'Fixedsys 62', sans-serif;
     white-space: pre-line;
+}
+
+.accessoriesPasteContainer{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 50vw;
+    height: 50vh;
+    background-color: #ffffff;
+    border: 1px solid black;
+    user-select: none;
+    display: none;
+    z-index: 1;
+}
+
+.accessoriesPasteHeader{
+    position: relative;
+    width: auto;
+    height: 4vh;
+    background-color: #001da0;
+}
+
+.exitAccessoriesPaste{
+    position: absolute;
+    left: 0;
+    background-color: #b6b6b6;
+    width: 35px;
+    height: 4vh;
+}
+
+.arrowDownAccessories{
+    position: absolute;
+    right: 35px;
+    background-color: #b6b6b6;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.arrowDownAccessories img{
+    position: relative;
+    width: 25px;
+}
+
+.arrowUpAccessories{
+    position: absolute;
+    right: 0;
+    background-color: #b6b6b6;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.arrowUpAccessories img{
+    position: relative;
+    width: 25px;
+}
+
+.accessoriesPasteTitle{
+    position: relative;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+    left: 38%;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.writeAccessoriesApp{
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.writeAccessoriesApp img{
+    position: relative;
+    width: 40px;
+    left: 20px;
+}
+
+.writeAccessoriesApp span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+    top: 20px;
+    left: -20px;
+}
+
+.terminalAccessoriesApp{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    cursor: pointer;
+}
+
+.terminalAccessoriesApp img{
+    position: relative;
+    width: 40px;
+    left: 35px;
+}
+
+.terminalAccessoriesApp span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+    top: 20px;
+    left: -20px;
+}
+
+.notePadAccessoriesApp{
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    cursor: pointer;
+}
+
+.notePadAccessoriesApp img{
+    position: relative;
+    width: 40px;
+    left: 35px;
+}
+
+.notePadAccessoriesApp span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+    top: 20px;
+    left: -12px;
+}
+
+.calcAccessoriesApp{
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    cursor: pointer;
+}
+
+.calcAccessoriesApp img{
+    position: relative;
+    width: 40px;
+    left: 35px;
+}
+
+.calcAccessoriesApp span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+    top: 20px;
+    left: -25px;
+}
+
+.clockAccessoriesApp{
+    position: absolute;
+    top: 40px;
+    left: 400px;
+    cursor: pointer;
+}
+
+.clockAccessoriesApp img{
+    position: relative;
+    width: 40px;
+    left: 35px;
+}
+
+.clockAccessoriesApp span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+    top: 20px;
+    left: -7px;
+}
+
+.mediaAccessoriesApp{
+    position: absolute;
+    top: 40px;
+    left: 500px;
+    cursor: pointer;
+}
+
+.mediaAccessoriesApp img{
+    position: relative;
+    width: 40px;
+    left: 35px;
+}
+
+.mediaAccessoriesApp span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    font-size: 17px;
+    top: 20px;
+    left: -30px;
+}
+
+.win3CalcContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 60vh;
+    background-color: #ffffff;
+    border: 1px solid black;
+    z-index: 3;
+}
+
+.win3CalcHeader{
+    position: relative;
+    height: 4vh;
+    background-color: #001da0;
+}
+
+.win3CalcTitle{
+    position: relative;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+    left: 33%;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.win3ArrowDownCalc{
+    position: absolute;
+    right: 0;
+    background-color: #b6b6b6;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.win3ArrowDownCalc img{
+    position: relative;
+    width: 25px;
+}
+
+.exitWin3Calc{
+    position: absolute;
+    left: 0;
+    background-color: #b6b6b6;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.keyNum3{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+}
+
+.keyNum3 button{
+    font-family: 'Fixedsys 62', sans-serif;
+    width: 55%;
+    height: 65%;
+    font-size: 30px;
+    font-weight: 200;
+    border-radius: 10px;
+    cursor: pointer;
+    top: 20px;
+    left: 15px;
+    position: relative;
+    background-color: transparent;
+}
+
+.keyNum3 button:active{
+    background-color: black;
+    color: #fff;
+}
+
+.numBlueBorder{
+    border: 1px solid #001da0;
+    color: #001da0;
+}
+
+.numOrangeBorder{
+    border: 1px solid #ff4800;
+}
+
+.win3CalcContainer input[type="text"]{
+    height: 35px;
+    width: 200px;
+    position: relative;
+    left: 150px;
+    top: 10px;
+    border: 1px solid black;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-size: 30px;
+    text-align: right;
 }
