@@ -49,6 +49,69 @@
     left: 105px;
 }
 
+.calculatorIconWin3{
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+
+.calculatorIconWin3 img{
+    width: 45px;
+    left: 300px;
+    position: relative;
+    bottom: 20px;
+}
+
+.calculatorIconWin3 span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    bottom: 5px;
+    left: 240px;
+}
+
+.writeIconWin3{
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+
+.writeIconWin3 img{
+    width: 45px;
+    left: 400px;
+    position: relative;
+    bottom: 20px;
+}
+
+.writeIconWin3 span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    bottom: 5px;
+    left: 360px;
+}
+
+.mediaPlayerIcon3{
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+
+.mediaPlayerIcon3 img{
+    width: 45px;
+    left: 500px;
+    position: relative;
+    bottom: 20px;
+}
+
+.mediaPlayerIcon3 span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: relative;
+    bottom: 5px;
+    left: 430px;
+}
+
 .programContainer{
     position: absolute;
     top: 50%;
@@ -82,6 +145,10 @@
     right: 0;
     background-color: #b6b6b6;
     width: 35px;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     z-index: 1;
 }
 
@@ -96,6 +163,10 @@
     right: 35px;
     background-color: #b6b6b6;
     width: 35px;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     z-index: 1;
 }
 
@@ -217,6 +288,10 @@
     position: absolute;
     left: 0;
     background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     width: 35px;
     height: 4vh;
 }
@@ -226,6 +301,10 @@
     right: 0;
     background-color: #b6b6b6;
     width: 35px;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     height: 4vh;
     z-index: 1;
 }
@@ -240,6 +319,10 @@
     right: 35px;
     background-color: #b6b6b6;
     width: 35px;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     height: 4vh;
     z-index: 1;
 }
@@ -421,6 +504,10 @@
     position: absolute;
     left: 0;
     background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     width: 35px;
     height: 4vh;
 }
@@ -429,6 +516,10 @@
     position: absolute;
     right: 35px;
     background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     width: 35px;
     height: 4vh;
     z-index: 1;
@@ -443,6 +534,10 @@
     position: absolute;
     right: 0;
     background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     width: 35px;
     height: 4vh;
     z-index: 1;
@@ -594,6 +689,13 @@
     left: -30px;
 }
 
+.writeAccessoriesApp span:hover, .terminalAccessoriesApp span:hover, .notePadAccessoriesApp span:hover, .calcAccessoriesApp span:hover,
+.clockAccessoriesApp span:hover, .mediaAccessoriesApp span:hover{
+    background-color: #001da0;
+    color: #fff;
+    font-weight: 100;
+}
+
 .win3CalcContainer{
     position: absolute;
     top: 50%;
@@ -603,6 +705,8 @@
     height: 60vh;
     background-color: #ffffff;
     border: 1px solid black;
+    user-select: none;
+    display: none;
     z-index: 3;
 }
 
@@ -625,6 +729,10 @@
     position: absolute;
     right: 0;
     background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     width: 35px;
     height: 4vh;
     z-index: 1;
@@ -639,6 +747,10 @@
     position: absolute;
     left: 0;
     background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
     width: 35px;
     height: 4vh;
     z-index: 1;
@@ -688,4 +800,292 @@
     font-family: 'Fixedsys 62', sans-serif;
     font-size: 30px;
     text-align: right;
+}
+
+#back{
+    grid-column: 1/3;
+    grid-row: 1;
+    width: 30%;
+    font-size: 20px;
+}
+
+#clear{
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+.clockContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 45vh;
+    background-color: #adadad;
+    border: 1px solid black;
+    user-select: none;
+    display: none;
+    z-index: 3;
+}
+
+.clockHeader{
+    position: relative;
+    height: 4vh;
+    background-color: #001da0;
+}
+
+.exitClockWIn3{
+    position: absolute;
+    left: 0;
+    background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.clockTitle{
+    position: relative;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+    left: 40%;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.clockTimeDisplay{
+    position: absolute;
+    font-family: 'Fixedsys 62', sans-serif;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+    font-size: 70px;
+}
+
+.clockDateDisplay{
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.writeWin3Container{
+    width: 70vw;
+    height: 85vh;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%);
+    background-color: #ffffff;
+    border: 1px solid black;
+    user-select: none;
+    display: none;
+    z-index: 3;
+}
+
+.writeWin3Header{
+    position: relative;
+    height: 4vh;
+    background-color: #001da0;
+}
+
+.writeWin3Title{
+    position: absolute;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+    left: 45%;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.whiteTargetWrite{
+    position: relative;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+}
+
+.whiteTargetWrite li{
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    list-style-type: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.whiteTargetWrite li:hover{
+    background-color: #001da0;
+    color: #fff;
+}
+
+.writeWin3Text{
+    position: relative;
+    width: 100%;
+    height: 89.3%;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    outline: none;
+    border: none;
+}
+
+.exitWrite3{
+    position: absolute;
+    left: 0;
+    background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.arrowUpWin3Write{
+    position: absolute;
+    right: 0;
+    background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.arrowUpWin3Write img{
+    width: 25px;
+}
+
+.arrowDownWin3Write{
+    position: absolute;
+    right: 35px;
+    background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    width: 35px;
+    height: 4vh;
+    z-index: 1;
+}
+
+.arrowDownWin3Write img{
+    width: 25px;
+}
+
+.mediaPlayerContainer{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 50vw;
+    height: 30vh;
+    background-color: #b6b6b6;
+    border: 1px solid black;
+    z-index: 3;
+    user-select: none;
+    display: none;
+}
+
+.mediaPlayerHeader{
+    position: relative;
+    height: 5vh;
+    background-color: #001da0;
+}
+
+#player{
+    position: absolute;
+    top: 50%;
+    width: 400px;
+    background-color: #ff4800;
+}
+
+.mediaPlayerTitle{
+    position: absolute;
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+    left: 15%;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.mediaPlayerControls{
+    position: absolute;
+    bottom: 5%;
+}
+
+.mediaPlayerControls button{
+    width: 50px;
+    height: auto;
+    font-size: 20px;
+    margin: 10px;
+    background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+}
+
+.progressBar{
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    width: 80%;
+    height: 10%;
+    background-color: transparent;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.progress{
+    position: relative;
+    width: 5%;
+    height: 100%;
+    background-color: #585858;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    user-select: none;
+    z-index: 0;
+}
+
+.win3ArrowDownMedia{
+    position: absolute;
+    right: 0;
+    background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    width: 45px;
+    height: 5vh;
+    z-index: 1;
+}
+
+.win3ArrowDownMedia img{
+    width: 30px;
+}
+
+.exitMediaWin3{
+    position: absolute;
+    left: 0;
+    background-color: #b6b6b6;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    width: 45px;
+    height: 5vh;
+    z-index: 1;
 }
