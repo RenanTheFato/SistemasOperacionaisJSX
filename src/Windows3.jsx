@@ -118,35 +118,39 @@ function AccessoriesPasteProgramManager(){
   return(
     <>
       <div className="accessoriesPasteContainer" onMouseDown={AccessoriesPasteMove} onMouseUp={AccessoriesPasteMove} onMouseMove={AccessoriesPasteMove}>
-        <div className="accessoriesPasteHeader">
-          <button className="exitAccessoriesPaste" onDoubleClick={killAccessoriesPaste}>─</button>
-          <button className="arrowDownAccessories" onClick={MinimizeAccessoriesPaste}><img src={arrowDownAccessories} /></button>
-          <button className="arrowUpAccessories"><img src={arrowUpAccessories} /></button>
-          <h1 className="accessoriesPasteTitle">Accessories</h1>
+        <div className="HeaderMoveA">
+          <div className="win3DefaultHeader">
+            <button className="exitWin3Default" onDoubleClick={killAccessoriesPaste}>─</button>
+            <button className="arrowDownWin3Default" onClick={MinimizeAccessoriesPaste}><img src={arrowDownAccessories} /></button>
+            <button className="arrowUpDefault"><img src={arrowUpAccessories} /></button>
+            <h1 className="accessoriesPasteTitle">Accessories</h1>
+          </div>
         </div>
-          <div className="writeAccessoriesApp" onDoubleClick={MinimizeWriteApp3}>
-            <img src={writeApp} />
-            <span>Write</span>
-          </div>
-          <div className="terminalAccessoriesApp">
-            <img src={terminalApp} />
-            <span>Terminal</span>
-          </div>
-          <div className="notePadAccessoriesApp">
-            <img src={notePadApp} />
-            <span>Notepad</span>
-          </div>
-          <div className="calcAccessoriesApp" onDoubleClick={Win3MinimizeCalc}>
-            <img src={calcApp} />
-            <span>Calculator</span>
-          </div>
-          <div className="clockAccessoriesApp" onDoubleClick={Win3MinimizeClock}>
-            <img src={clockApp} />
-            <span>Clock</span>
-          </div>
-          <div className="mediaAccessoriesApp" onDoubleClick={MinimizeMediaPlayerApp3}>
-            <img src={mediaApp} />
-            <span>Media Player</span>
+          <div className="accessoriesIcons">
+            <div className="writeAccessoriesApp" onDoubleClick={MinimizeWriteApp3}>
+              <img src={writeApp} />
+              <span>Write</span>
+            </div>
+            <div className="terminalAccessoriesApp">
+              <img src={terminalApp} />
+              <span>Terminal</span>
+            </div>
+            <div className="notePadAccessoriesApp">
+              <img src={notePadApp} />
+              <span>Notepad</span>
+            </div>
+            <div className="calcAccessoriesApp" onDoubleClick={Win3MinimizeCalc}>
+              <img src={calcApp} />
+              <span>Calculator</span>
+            </div>
+            <div className="clockAccessoriesApp" onDoubleClick={Win3MinimizeClock}>
+              <img src={clockApp} />
+              <span>Clock</span>
+            </div>
+            <div className="mediaAccessoriesApp" onDoubleClick={MinimizeMediaPlayerApp3}>
+              <img src={mediaApp} />
+              <span>Media Player</span>
+            </div>
           </div>
         </div>
     </>
@@ -189,11 +193,17 @@ function AccessoriesPasteProgramManager(){
 
   function AccessoriesPasteMove(){
   const targetDragWrite = document.querySelector('.accessoriesPasteContainer')
+  const targetDragHeaderAccessories = document.querySelector('.HeaderMoveA')
+  const targetDragIcons = document.querySelector('.accessoriesIcons')
   var offsetX, offsetY
 
   const move =(e) =>{
     targetDragWrite.style.left =`${e.clientX - offsetX}px`
     targetDragWrite.style.top =`${e.clientY - offsetY}px`
+    targetDragWrite.style.background = "transparent"
+    targetDragWrite.style.border = "10px solid gray"
+    targetDragHeaderAccessories.style.display = 'none'
+    targetDragIcons.style.display = 'none'
   }
   targetDragWrite.addEventListener('mousedown', (e) =>{
     offsetX = e.clientX - targetDragWrite.offsetLeft;
@@ -202,6 +212,10 @@ function AccessoriesPasteProgramManager(){
   })
   document.addEventListener('mouseup', () => {
     document.removeEventListener('mousemove', move);
+    targetDragWrite.style.background = "white"
+    targetDragWrite.style.border = "1px solid black"
+    targetDragHeaderAccessories.style.display = 'block'
+    targetDragIcons.style.display = 'block'
   });
 }
 
@@ -225,34 +239,38 @@ function AccessoriesPasteProgramManager(){
     return(
       <>
       <div className="win3CalcContainer" onMouseDown={WIn3CalcMove} onMouseUp={WIn3CalcMove} onMouseMove={WIn3CalcMove}>
-        <div className="win3CalcHeader">
-        <button className="exitWin3Calc" onDoubleClick={killWin3Calc}>─</button>
-        <button className="win3ArrowDownCalc" onClick={Win3MinimizeCalc}><img src={win3ArrowDownCalc} /></button>
-          <h1 className="win3CalcTitle">Calculator</h1>
-        </div>
-        <form>
-            <input className="calcResult" type="text" value={resultado} readOnly />
-          </form>
-          <div className="keyNum3">
-            <button className="numOrangeBorder" onClick={clear} id="clear">C</button>
-            <button className="numOrangeBorder" onClick={backspace} id="back">Back</button>
-            <button name="/" className="numOrangeBorder" onClick={click}>&#47;</button>
-            <button name="*" className="numOrangeBorder" onClick={click}>&#42;</button>
-            <button name="7" className="numBlueBorder" onClick={click}>7</button>
-            <button name="8" className="numBlueBorder" onClick={click}>8</button>
-            <button name="9" className="numBlueBorder" onClick={click}>9</button>
-            <button name="+" className="numOrangeBorder" onClick={click}>+</button>
-            <button name="4" className="numBlueBorder" onClick={click}>4</button>
-            <button name="5" className="numBlueBorder" onClick={click}>5</button>
-            <button name="6" className="numBlueBorder" onClick={click}>6</button>
-            <button name="-"className="numOrangeBorder" onClick={click}>&ndash;</button>
-            <button name="1" className="numBlueBorder" onClick={click}>1</button>
-            <button name="2" className="numBlueBorder" onClick={click}>2</button>
-            <button name="3" className="numBlueBorder" onClick={click}>3</button>
-            <button name="." className="numOrangeBorder" onClick={click}>.</button>
-            <button name="0" className="numBlueBorder" onClick={click}>0</button>
-            <button  className="numOrangeBorder" onClick={calcular} id="result">=</button>
+        <div className="HeaderMoveC">
+          <div className="win3DefaultHeader">
+          <button className="exitWin3Default" onDoubleClick={killWin3Calc}>─</button>
+          <button className="arrowDownWin3Default2" onClick={Win3MinimizeCalc}><img src={win3ArrowDownCalc} /></button>
+            <h1 className="win3CalcTitle">Calculator</h1>
           </div>
+        </div>
+        <div className="ContainerMoveC">
+          <form>
+              <input className="calcResult" type="text" value={resultado} readOnly />
+            </form>
+            <div className="keyNum3">
+              <button className="numOrangeBorder" onClick={clear} id="clear">C</button>
+              <button className="numOrangeBorder" onClick={backspace} id="back">Back</button>
+              <button name="/" className="numOrangeBorder" onClick={click}>&#47;</button>
+              <button name="*" className="numOrangeBorder" onClick={click}>&#42;</button>
+              <button name="7" className="numBlueBorder" onClick={click}>7</button>
+              <button name="8" className="numBlueBorder" onClick={click}>8</button>
+              <button name="9" className="numBlueBorder" onClick={click}>9</button>
+              <button name="+" className="numOrangeBorder" onClick={click}>+</button>
+              <button name="4" className="numBlueBorder" onClick={click}>4</button>
+              <button name="5" className="numBlueBorder" onClick={click}>5</button>
+              <button name="6" className="numBlueBorder" onClick={click}>6</button>
+              <button name="-"className="numOrangeBorder" onClick={click}>&ndash;</button>
+              <button name="1" className="numBlueBorder" onClick={click}>1</button>
+              <button name="2" className="numBlueBorder" onClick={click}>2</button>
+              <button name="3" className="numBlueBorder" onClick={click}>3</button>
+              <button name="." className="numOrangeBorder" onClick={click}>.</button>
+              <button name="0" className="numBlueBorder" onClick={click}>0</button>
+              <button  className="numOrangeBorder" onClick={calcular} id="result">=</button>
+            </div>
+        </div>
       </div>
       </>
     )
@@ -281,11 +299,17 @@ function AccessoriesPasteProgramManager(){
 
   function WIn3CalcMove(){
     const targetDragWrite = document.querySelector('.win3CalcContainer')
+    const targetDragHeaderCalc = document.querySelector('.HeaderMoveC')
+    const targetDragContainerCalc = document.querySelector('.ContainerMoveC')
     var offsetX, offsetY
   
     const move =(e) =>{
       targetDragWrite.style.left =`${e.clientX - offsetX}px`
       targetDragWrite.style.top =`${e.clientY - offsetY}px`
+      targetDragWrite.style.background = 'transparent'
+      targetDragWrite.style.border = '10px solid gray'
+      targetDragHeaderCalc.style.display = 'none'
+      targetDragContainerCalc.style.display = 'none'
     }
     targetDragWrite.addEventListener('mousedown', (e) =>{
       offsetX = e.clientX - targetDragWrite.offsetLeft;
@@ -294,6 +318,10 @@ function AccessoriesPasteProgramManager(){
     })
     document.addEventListener('mouseup', () => {
       document.removeEventListener('mousemove', move);
+      targetDragWrite.style.background = 'white'
+      targetDragWrite.style.border = '1px solid black'
+      targetDragHeaderCalc.style.display = 'block'
+      targetDragContainerCalc.style.display = 'block'
     });
   }
 
@@ -312,12 +340,16 @@ function AccessoriesPasteProgramManager(){
     return(
       <>
       <div className="clockContainer" onMouseUp={WIn3ClockMove} onMouseDown={WIn3ClockMove} onMouseMove={WIn3ClockMove}>
-        <div className="clockHeader">
-        <button className="exitClockWIn3" onDoubleClick={killWin3Clock}>─</button>
-          <h1 className="clockTitle">Clock</h1>
+        <div className="MoveHeaerClock">
+          <div className="win3DefaultHeader">
+          <button className="exitWin3Default" onDoubleClick={killWin3Clock}>─</button>
+            <h1 className="clockTitle">Clock</h1>
+          </div>
         </div>
-        <h1 className="clockTimeDisplay">{currentTime}</h1>
-        <h1 className="clockDateDisplay">{date}</h1>
+        <div className="ClockMoveContainer">
+          <h1 className="clockTimeDisplay">{currentTime}</h1>
+          <h1 className="clockDateDisplay">{date}</h1>
+        </div>
       </div>
       </>
     )
@@ -325,11 +357,17 @@ function AccessoriesPasteProgramManager(){
 
   function WIn3ClockMove(){
     const targetDragWrite = document.querySelector('.clockContainer')
+    const targetMoveHeaderClock = document.querySelector('.MoveHeaerClock')
+    const targetMoveClockContainer = document.querySelector('.ClockMoveContainer')
     var offsetX, offsetY
   
     const move =(e) =>{
       targetDragWrite.style.left =`${e.clientX - offsetX}px`
       targetDragWrite.style.top =`${e.clientY - offsetY}px`
+      targetDragWrite.style.background = 'transparent'
+      targetDragWrite.style.border = '10px solid gray'
+      targetMoveHeaderClock.style.display = "none"
+      targetMoveClockContainer.style.display = 'none'
     }
     targetDragWrite.addEventListener('mousedown', (e) =>{
       offsetX = e.clientX - targetDragWrite.offsetLeft;
@@ -338,6 +376,10 @@ function AccessoriesPasteProgramManager(){
     })
     document.addEventListener('mouseup', () => {
       document.removeEventListener('mousemove', move);
+      targetDragWrite.style.background = '#adadad'
+      targetDragWrite.style.border = '1px solid black'
+      targetMoveHeaderClock.style.display = "block"
+      targetMoveClockContainer.style.display = 'block'
     });
   }
 
@@ -363,10 +405,10 @@ function AccessoriesPasteProgramManager(){
     return(
       <>
       <div className="writeWin3Container">
-        <div className="writeWin3Header">
-        <button className="arrowDownWin3Write" onClick={MinimizeWriteApp3}><img src={arrowDownWriteWin3App}/></button>
-        <button className="arrowUpWin3Write"><img src={arrowUpWriteWin3App}/></button>
-        <button className="exitWrite3" onDoubleClick={killWriteApp3}>─</button>
+        <div className="win3DefaultHeader">
+        <button className="arrowDownWin3Default" onClick={MinimizeWriteApp3}><img src={arrowDownWriteWin3App}/></button>
+        <button className="arrowUpDefault"><img src={arrowUpWriteWin3App}/></button>
+        <button className="exitWin3Default" onDoubleClick={killWriteApp3}>─</button>
           <h1 className="writeWin3Title">Write</h1>
         </div>
         <div className="whiteTargetWrite">
@@ -412,10 +454,10 @@ function MainPasteProgramManager(){
   return(
     <>
     <div className="mainProgramMContainer">
-      <div className="mainProgramMHeader">
-        <button className="exitMainPaste" onDoubleClick={killMainPaste}>─</button>
-        <button className="arrowDownMain" onClick={MinimizeMainPaste}><img src={arrowDownMain} /></button>
-        <button className="arrowUpMain"><img src={arrowUpMain} /></button>
+      <div className="win3DefaultHeader">
+        <button className="exitWin3Default" onDoubleClick={killMainPaste}>─</button>
+        <button className="arrowDownWin3Default" onClick={MinimizeMainPaste}><img src={arrowDownMain} /></button>
+        <button className="arrowUpDefault"><img src={arrowUpMain} /></button>
         <h1 className="mainProgramMTitle">Main</h1>
       </div>
       <div className="fileManagerEXE">
@@ -465,9 +507,19 @@ function killMainPaste() {
 function MsPromptHide() {
   const programManagerHide = document.querySelector(".programContainer")
   const terminalContainer = document.querySelector(".prompt")
+  const terminalMainIcon= document.querySelector(".mainSystemIcon")
+  const terminalAccessoriesIcon= document.querySelector(".accessoriesSystemIcon")
+  const terminalCalcIcon= document.querySelector(".calculatorIconWin3")
+  const terminalWriteIcon= document.querySelector(".writeIconWin3")
+  const terminalMediaIcon= document.querySelector(".mediaPlayerIcon3")
 
   programManagerHide.style.display = 'none'
   terminalContainer.style.display = 'block'
+  terminalMainIcon.style.display = 'none'
+  terminalAccessoriesIcon.style.display = 'none'
+  terminalCalcIcon.style.display = 'none'
+  terminalWriteIcon.style.display = 'none'
+  terminalMediaIcon.style.display = 'none'
 }
 
 function MsDosPrompt(){

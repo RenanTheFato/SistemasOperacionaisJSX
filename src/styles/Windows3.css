@@ -278,13 +278,8 @@
     z-index: 1;
 }
 
-.mainProgramMHeader{
-    width: auto;
-    height: 4vh;
-    background-color: #001da0;
-}
 
-.exitMainPaste{
+.exitWin3Default{
     position: absolute;
     left: 0;
     background-color: #b6b6b6;
@@ -294,9 +289,10 @@
     border-bottom-color: #7b7b7b;
     width: 35px;
     height: 4vh;
+    z-index: 1;
 }
 
-.arrowUpMain{
+.arrowUpDefault{
     position: absolute;
     right: 0;
     background-color: #b6b6b6;
@@ -309,25 +305,7 @@
     z-index: 1;
 }
 
-.arrowUpMain img{
-    position: relative;
-    width: 25px;
-}
-
-.arrowDownMain{
-    position: absolute;
-    right: 35px;
-    background-color: #b6b6b6;
-    width: 35px;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    height: 4vh;
-    z-index: 1;
-}
-
-.arrowDownMain img{
+.arrowUpDefault img{
     position: relative;
     width: 25px;
 }
@@ -493,26 +471,14 @@
     z-index: 1;
 }
 
-.accessoriesPasteHeader{
+.win3DefaultHeader{
     position: relative;
     width: auto;
     height: 4vh;
     background-color: #001da0;
 }
 
-.exitAccessoriesPaste{
-    position: absolute;
-    left: 0;
-    background-color: #b6b6b6;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    width: 35px;
-    height: 4vh;
-}
-
-.arrowDownAccessories{
+.arrowDownWin3Default{
     position: absolute;
     right: 35px;
     background-color: #b6b6b6;
@@ -525,12 +491,12 @@
     z-index: 1;
 }
 
-.arrowDownAccessories img{
+.arrowDownWin3Default img{
     position: relative;
     width: 25px;
 }
 
-.arrowUpAccessories{
+.arrowDownWin3Default2{
     position: absolute;
     right: 0;
     background-color: #b6b6b6;
@@ -543,7 +509,7 @@
     z-index: 1;
 }
 
-.arrowUpAccessories img{
+.arrowDownWin3Default2 img{
     position: relative;
     width: 25px;
 }
@@ -710,11 +676,6 @@
     z-index: 3;
 }
 
-.win3CalcHeader{
-    position: relative;
-    height: 4vh;
-    background-color: #001da0;
-}
 
 .win3CalcTitle{
     position: relative;
@@ -723,37 +684,6 @@
     left: 33%;
     font-weight: 100;
     font-size: 30px;
-}
-
-.win3ArrowDownCalc{
-    position: absolute;
-    right: 0;
-    background-color: #b6b6b6;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    width: 35px;
-    height: 4vh;
-    z-index: 1;
-}
-
-.win3ArrowDownCalc img{
-    position: relative;
-    width: 25px;
-}
-
-.exitWin3Calc{
-    position: absolute;
-    left: 0;
-    background-color: #b6b6b6;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    width: 35px;
-    height: 4vh;
-    z-index: 1;
 }
 
 .keyNum3{
@@ -828,25 +758,6 @@
     z-index: 3;
 }
 
-.clockHeader{
-    position: relative;
-    height: 4vh;
-    background-color: #001da0;
-}
-
-.exitClockWIn3{
-    position: absolute;
-    left: 0;
-    background-color: #b6b6b6;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    width: 35px;
-    height: 4vh;
-    z-index: 1;
-}
-
 .clockTitle{
     position: relative;
     color: #fff;
@@ -889,12 +800,6 @@
     z-index: 3;
 }
 
-.writeWin3Header{
-    position: relative;
-    height: 4vh;
-    background-color: #001da0;
-}
-
 .writeWin3Title{
     position: absolute;
     color: #fff;
@@ -935,53 +840,6 @@
     font-family: 'Fixedsys 62', sans-serif;
     outline: none;
     border: none;
-}
-
-.exitWrite3{
-    position: absolute;
-    left: 0;
-    background-color: #b6b6b6;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    width: 35px;
-    height: 4vh;
-    z-index: 1;
-}
-
-.arrowUpWin3Write{
-    position: absolute;
-    right: 0;
-    background-color: #b6b6b6;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    width: 35px;
-    height: 4vh;
-    z-index: 1;
-}
-
-.arrowUpWin3Write img{
-    width: 25px;
-}
-
-.arrowDownWin3Write{
-    position: absolute;
-    right: 35px;
-    background-color: #b6b6b6;
-    border-left-color: white;
-    border-top-color: white;
-    border-right-color: #7b7b7b;
-    border-bottom-color: #7b7b7b;
-    width: 35px;
-    height: 4vh;
-    z-index: 1;
-}
-
-.arrowDownWin3Write img{
-    width: 25px;
 }
 
 .mediaPlayerContainer{

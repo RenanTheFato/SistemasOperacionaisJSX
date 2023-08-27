@@ -26,6 +26,7 @@ function FirstWindow({ nome }) {
         <button><a href="/Windows1">WIN1</a></button>
         <button><a href="/Windows2">WIN2</a></button>
         <button><a href="/Windows3">WIN3</a></button>
+        <button><a href="/Windows98">WIN98</a></button>
       </div>
     );
   }

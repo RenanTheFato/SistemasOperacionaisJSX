@@ -78,7 +78,7 @@ function MediaPlayerApp3({isPlaying, setisPlaying, songs}) {
           <div className="mediaPlayerControls">
             <button id="play" onClick={PlayPause}>⏵</button>
             <button id="pause" onClick={PlayPause}>⏸</button>
-            <button id="stop">⏹</button>
+            <button id="stop" onClick={PlayPause}>⏹</button>
             <button id="forward" onClick={skipNext}>»</button>
             <button id="backard" onClick={skipBack}>«</button>
           </div>
