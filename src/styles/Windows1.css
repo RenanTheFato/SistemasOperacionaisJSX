@@ -6,6 +6,7 @@
 
 
 .window{
+    position: relative;
     width: auto;
     height: 100vh;
     background-color: #5ff36b;

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+.banner{
+    position: relative;
+    width: auto;
+    height: 30vh;
+    background-color: #181818;
+}
+
+.osName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 75px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.osContainer{
+    position: relative;
+    width: auto;
+    height: 70vh;
+}
+
+.textContainer1{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 45vw;
+    height: auto;
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.textContainer1 p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.textContainer2{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    width: 45vw;
+    height: 45vh;
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.textContainer2 h1{
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 35px;
+}
+
+.divisionWarn{
+    position: relative;
+    width: auto;
+    height: 10vh;
+    background-color: #181818;
+    margin-bottom: 2px;
+}
+
+.divisionWarn h1{
+    position: relative;
+    top: 20%;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 35px;
+    color: #fff;
+}

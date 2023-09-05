@@ -4,6 +4,7 @@
 @import url('https://fonts.cdnfonts.com/css/microsoft-sans-serif'); /* font-family: 'Microsoft Sans Serif', sans-serif; */
 
 .system98{
+    position: relative;
     width: auto;
     height: 100vh;
     background-color: #1e7554;
@@ -22,6 +23,36 @@
     background-color: #b1b1b1;
     user-select: none;
     z-index: 2;
+}
+
+.slotContainer{
+    position: relative;
+    width: 15%;
+    top: 15%;
+    border: 1px solid;
+    border-top-color: #000000;
+    border-left-color: #000000;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+    height: 70%;
+    background-color: #b1b1b1;
+    left: 5%;
+    display: none;
+}
+
+.slotContainer img{
+    position: absolute;
+    left: 2%;
+    top: 12%;
+    width: 20px;
+}
+
+.slotContainer span{
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
 }
 
 .systemStartMenu{
@@ -471,6 +502,29 @@
     color: white;
 }
 
+.MinesweeperIcon{
+    position: absolute;
+    top: 48%;
+    left: 2%;
+    cursor: pointer;
+}
+
+.MinesweeperIcon img{
+    width: 35px;
+    position: relative;
+    left: 12px;
+}
+
+.MinesweeperIcon span{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    position: absolute;
+    top: 100%;
+    left: 9%;
+    color: white;
+    text-align: center;
+}
+
 .internetContainer{
     position: absolute;
     top: 50%;
@@ -485,14 +539,24 @@
     border-right-color: black;
     border-bottom-color: black;
     z-index: 3;
+    display: none;
+    user-select: none;
 }
 
-.internetNavBar{
+.defaultWin98NavBar{
     position: relative;
     width: auto;
     height: 3.5vh;
     background: linear-gradient(90deg, #040055 0%, #4747c4 100%);
     z-index: 4;
+}
+
+.internetNavBar.appBarOpen{
+    animation: appBarOpen .3s linear forwards;
+}
+
+.internetNavBar.appBarClose{
+    animation: appBarClose 1s ease forwards;
 }
 
 .closeButtonDefaultWin98{
@@ -558,7 +622,7 @@
     color: #ffffff;
 }
 
-.explorerFunctionsNavBar{
+.FunctionsNavBar{
     position: relative;
     width: auto;
     height: 7vh;
@@ -687,6 +751,144 @@
     height: 80%;
 }
 
+.minesweeperContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 21vw;
+    height: 53vh;
+    background-color: #040055;
+    display: none;
+    z-index: 1000;
+}
+
+.maximizeButtonDefaultWin98.minesweeper{
+    right: 8.5%;
+}
+
+.minimizeButtonDefaultWin98.minesweeper{
+    right: 17%;
+}
+
+.minesweeperIconNav{
+    width: 20px;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+}
+
+.defaultWin98NavBar.mines.appBarOpen{
+    animation: appBarOpen .3s linear forwards;
+}
+
+.defaultWin98NavBar.mines.appBarClose{
+    animation: appBarClose .3s linear forwards;
+}
+
+.minesweeperAdress{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+    color: #ffffff;
+}
+
+.minesweeperIframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slotContainer.mines{
+    position: absolute;
+    left: 20.5%;
+    display: none;
+}
+
+.computerContainer{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 65vw;
+    height: 75vh;
+    background-image: url("./src/assets/Win98Icons/explorerbackground.jpg");
+    background-size: cover;
+    border: 3px solid;
+    border-top-color: #c9c9c9;
+    border-left-color: #c9c9c9;
+    border-right-color: #1b1b1b;
+    border-bottom-color: #1b1b1b;
+    user-select: none;
+}
+
+.directoryIconNav{
+    width: 26px;
+    position: absolute;
+    left: 1%;
+    top: -30%;
+}
+
+.pasteContainer{
+    position: absolute;
+    width: 40vw;
+    height: 65vh;
+    right: 0;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.computerPasteIcons{
+    position: absolute;
+    top: 6%;
+    left: 0;
+}
+
+.title{
+    font-weight: 100;
+    font-family: 'Fixedsys 62', sans-serif;
+}
+
+.computerPasteIcons:nth-child(2){
+    left: 70px;
+}
+
+.computerPasteIcons:nth-child(3){
+    left: 160px;
+}
+
+.computerPasteIcons:nth-child(4){
+    left: 220px;
+}
+
+.computerPasteIcons:nth-child(5){
+    left: 310px;
+}
+
+.FunctionsNavBar.computer{
+    position: relative;
+}
+
+.addressExplorer.computer{
+    position: relative;
+    top: 100%;
+}
+
+.addressTarget.computer span{
+    position: absolute;
+    left: 3.5%;
+}
+
+.addressTarget.computer img{
+    position: absolute;
+    top: -5%;
+    width: 20px;
+}
+
 @keyframes menuUp{
     0%{
         transform: translateY(100%);
@@ -720,6 +922,30 @@
     }
     100%{
         transform: translateY(100%);
+        display: none;
+    }
+}
+
+@keyframes appBarOpen{
+    0%{
+        top: 100%;
+        right: 20%;
+    }
+    100%{
+        top: 0%;
+        right: 0%;
+        display: block;
+    }
+}
+
+@keyframes appBarClose{
+    0%{
+        top: 0%;
+        right: 0%;
+    }
+    100%{
+        top: 100%;
+        right: 20%;
         display: none;
     }
 }

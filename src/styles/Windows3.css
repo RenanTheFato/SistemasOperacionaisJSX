@@ -2,6 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/fixedsys-62');     /* font-family: 'Fixedsys 62', sans-serif; */
 
 .system3{
+    position: relative;
     width: auto;
     height: 100vh;
     background-color: #c9c9c9;

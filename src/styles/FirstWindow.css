@@ -1,43 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
 .main {
-    width: auto;
-    height: 100vh;
-  }
-  
-  .bgImage {
-    width: 100%;
-    height: auto;
-    z-index: -2;
-  }
-  
-  .mainTitleOS {
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid #fff;
-    background-color: #ffffff27;
-    backdrop-filter: blur(5px);
-    font-family: "Ubuntu", sans-serif;
-    margin-top: 100px;
-  }
-  
-  .titleOS {
-    color: #fff;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 40px;
-  }
-  
-  .textOS {
-    color: #fff;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    text-align: justify;
-  }
+  width: auto;
+  height: 100vh;
+}
+
+.bgImage {
+  width: 100%;
+  height: auto;
+  z-index: -2;
+}
+
+.mainTitleOS {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: #ffffff27;
+  backdrop-filter: blur(5px);
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 100px;
+}
+
+.titleOS {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.textOS {
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.container2{
+  position: relative;
+  top: -.6%;
+  width: auto;
+  height: 100vh;
+  background-color: #181818;
+}
+
+.box2Title{
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.firstTextBox2{
+  background-color: transparent;
+  position: absolute;
+  width: 45vw;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid;
+  border-top-color: #06c7ce;
+  border-left-color: #037b99;
+  border-bottom-color: #8f06ce;
+  border-right-color: #035099;
+  top: 20%;
+  left: 2%;
+}
+
+.firstTextBox2 p{
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: justify;
+  color: #fff;
+  padding: 10px 10px;
+}
+
+.highlight1{
+  color: #377fdd;
+}
+
+.highlight2{
+  color: #c121d6;
+}
+
+.highlight3{
+  color: #377fdd;
+}
+
+.highlight4{
+  color: #eba119;
+}
+
+.highlight5{
+  color: #13c931;
+}
+
+.underline1{
+  color: #06c7ce;
+}
+
+.secondTextBox2{
+  background-color: transparent;
+  position: absolute;
+  border-radius: 20px;
+  border: 1px solid;
+  border-top-color: #06c7ce;
+  border-left-color: #037b99;
+  border-bottom-color: #8f06ce;
+  border-right-color: #035099;
+  width: 45vw;
+  height: auto;
+  top: 50%;
+  left: 2%;
+}
+
+.secondTextBox2 p{
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: justify;
+  padding: 20px 20px;
+  color: #fff;
+}
+
+.mainVideo{
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  width: 35vw;
+  height: auto;
+}
+
+.container3{
+  position: relative;
+  top: -.6%;
+  width: auto;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.box3Title{
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 50px;
+  color: #181818;
+  font-weight: bold;
+}
+
+.buttonContainer{
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;
+  height: 65vh;
+  background-color: #035099;
+}
+
+.osButtons{
+  position: relative;
+  top: 5%;
+  width: 15vw;
+  height: auto;
+  padding: 10px 10px;
+  margin: 10px 25px;
+  border-radius: 10px;
+  border: none;
+}
+
+.osButtons a{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #181818;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+.osButtons img{
+  width: 48px;
+  margin-bottom: 5px;
+}
+
+.osButtons.unix img{
+  width: 32px;
+}
+
+.osButtons.linux img{
+  width: 28px;
+}
+
+.osButtons.conclued{
+  background-color: green;
+}
+
+.osButtons.notconclued{
+  background-color: red;
+}

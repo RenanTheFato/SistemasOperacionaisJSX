@@ -21,6 +21,7 @@ function Windows98() {
   const PasteIcon2 = "./src/assets/Win98Icons/pasta2.png"
   const TemplateIcon = "./src/assets/Win98Icons/template.png"
   const InternetExplorerIcon = "./src/assets/Win98Icons/explorer.png"
+  const MinesweeperIcon = "./src/assets/Win98Icons/campo-minado.png"
 
 
   let time = new Date().toLocaleTimeString()
@@ -35,6 +36,8 @@ function Windows98() {
     <>
     <div className="system98">
       <InternetExplorerApp/>
+      <MinesweeperApp/>
+      <ComputerApp/>
     <div className="systemStartMenu">
       <div className="lateralBar">
         <h1 className="system98Title">WINDOWS 98</h1>
@@ -81,6 +84,14 @@ function Windows98() {
         <div className="systemNavBar">
             <button className="systemStartButton" onClick={ShowHideMenu}><img src={startIcon} /></button>
             <button className="systemStartButton2" onClick={ShowHideMenu}><img src={startIcon} /></button>
+            <div className="slotContainer" onClick={MinimizeExplorerApp}>
+              <img src={InternetExplorerIcon}/>
+              <span>Internet Explorer</span>
+            </div>
+            <div className="slotContainer mines" onClick={MinimizeMinesweeperApp}>
+              <img src={MinesweeperIcon}/>
+              <span>Campo Minado</span>
+            </div>
             <div className="clockWin98">
               <h1>{currentTime}</h1>
             </div>
@@ -98,9 +109,13 @@ function Windows98() {
             <img src={PasteIcon} />
             <span>Documentos</span>
           </div>
-          <div className="InternetIcon">
+          <div className="InternetIcon" onDoubleClick={MinimizeExplorerApp}>
             <img src={InternetExplorerIcon} />
             <span>Internet Explorer</span>
+          </div>
+          <div className="MinesweeperIcon" onDoubleClick={MinimizeMinesweeperApp}>
+            <img src={MinesweeperIcon} />
+            <span>Campo Minado</span>
           </div>
         </div>
     </div>
@@ -132,15 +147,15 @@ function InternetExplorerApp() {
   const RefreshIcon = "./src/assets/Win98Icons/recarregar.png"
   return(
     <>
-    <div className="internetContainer">
-      <div className="internetNavBar">
+    <div className="internetContainer" onMouseDown={InternetExplorerMove} onMouseUp={InternetExplorerMove} onMouseMove={InternetExplorerMove}>
+      <div className="defaultWin98NavBar internetNavBar">
       <img className="explorerSheetIcon" src={ExplorerSheet} />
-      <span className="explorerAdress">https://web.archive.org/web/1998/https://www.google.com/</span>
-      <button className="closeButtonDefaultWin98"><img src={CloseIconWin98}/></button>
-      <button className="maximizeButtonDefaultWin98"><img src={MaximizeIconWin98}/></button>
-      <button className="minimizeButtonDefaultWin98"><img src={MinimizeIconWin98}/></button>
+      <span className="explorerAdress">Internet Explorer</span>
+      <button className="closeButtonDefaultWin98" onClick={KillExplorerApp}><img src={CloseIconWin98}/></button>
+      <button className="maximizeButtonDefaultWin98" onClick={MaximizeExplorerApp}><img src={MaximizeIconWin98}/></button>
+      <button className="minimizeButtonDefaultWin98" onClick={MinimizeExplorerApp}><img src={MinimizeIconWin98}/></button>
       </div>
-      <div className="explorerFunctionsNavBar">
+      <div className="FunctionsNavBar">
         <div className="stopExplorer">
           <img src={StopIcon}/>
           <span>Parar</span>
@@ -149,7 +164,7 @@ function InternetExplorerApp() {
           <img src={RefreshIcon}/>
           <span>Recarregar</span>
         </div>
-        <div className="homeExplorer">
+        <div className="homeExplorer" onClick={ExplorerHome}>
           <img src={HomeIcon}/>
           <span>Início</span>
         </div>
@@ -165,8 +180,197 @@ function InternetExplorerApp() {
     </div>
     </>
   )
+    function ExplorerHome() {
+      const targetRefresh = document.querySelector(".internetIframe")
+      const defaultURL = "https://web.archive.org/web/19990125084553/http://alpha.google.com/"
+      targetRefresh.src = defaultURL
+    }
 }
 
-// https://web.archive.org/web/19990125084553/http://alpha.google.com/
+function MinimizeExplorerApp() {
+  const targetMinimizeExplorer = document.querySelector('.internetContainer')
+  const targetSlot = document.querySelector('.slotContainer')
+  const tergetAnimateInternet = document.querySelector('.internetNavBar')
 
+  if (targetMinimizeExplorer.style.display === 'block') {
+    targetMinimizeExplorer.style.display = 'none'
+    targetSlot.style.display = 'block'
+    targetSlot.style.borderTopColor = "#ffffff"
+    targetSlot.style.borderLeftColor = "#ffffff"
+    targetSlot.style.borderRightColor = "#000000"
+    targetSlot.style.borderBottomColor = "#000000"
+    targetSlot.style.background = '#b1b1b1'
+    tergetAnimateInternet.classList.remove("appBarOpen")
+    tergetAnimateInternet.classList.add("appBarClose")
+  } else {
+    targetMinimizeExplorer.style.display = 'block'
+    targetSlot.style.display = 'block'
+    targetSlot.style.borderTopColor = "#000000"
+    targetSlot.style.borderLeftColor = "#000000"
+    targetSlot.style.borderRightColor = "#ffffff"
+    targetSlot.style.borderBottomColor = "#ffffff"
+    targetSlot.style.background = '#cccccc'
+    tergetAnimateInternet.classList.remove("appBarClose")
+    tergetAnimateInternet.classList.add("appBarOpen")
+  }
+}
+
+function MaximizeExplorerApp() {
+  const targetFullScreenExplorer = document.querySelector(".internetContainer")
+  const buttonMinimize = document.querySelector(".maximizeButtonDefaultWin98")
+  const buttonMaximize = document.querySelector(".minimizeButtonDefaultWin98")
+  const iframeExplorer = document.querySelector(".internetIframe")
+
+  if (targetFullScreenExplorer.style.width == "100%") {
+    targetFullScreenExplorer.style.width = '853px'
+    targetFullScreenExplorer.style.height = '473.7px'
+    targetFullScreenExplorer.style.border = '2px solid'
+    buttonMinimize.style.right = ' 3.3%'
+    buttonMaximize.style.right = '6.3%'
+    iframeExplorer.style.height = '80%'
+  } else {
+    targetFullScreenExplorer.style.width = '100%'
+    targetFullScreenExplorer.style.height = '100%'
+    targetFullScreenExplorer.style.border = 'none'
+    targetFullScreenExplorer.style.top =  '50%'
+    targetFullScreenExplorer.style.left = '50%'
+    buttonMinimize.style.right = '2.5%'
+    buttonMaximize.style.right = '4.5%'
+    iframeExplorer.style.height = '84.5%'
+  }
+}
+
+function KillExplorerApp() {
+  const targetKillExplorer = document.querySelector('.internetContainer')
+  const targetSlotKill = document.querySelector('.slotContainer')
+
+  targetKillExplorer.style.display = 'none'
+  targetSlotKill.style.display = 'none'
+}
+
+function InternetExplorerMove(){
+  const targetDragInternet = document.querySelector('.internetContainer')
+  var offsetX, offsetY
+
+  const move =(e) =>{
+    targetDragInternet.style.left =`${e.clientX - offsetX}px`
+    targetDragInternet.style.top =`${e.clientY - offsetY}px`
+  }
+  targetDragInternet.addEventListener('mousedown', (e) =>{
+    offsetX = e.clientX - targetDragInternet.offsetLeft;
+    offsetY = e.clientY - targetDragInternet.offsetTop;
+    document.addEventListener('mousemove', move);
+  })
+  document.addEventListener('mouseup', () => {
+    document.removeEventListener('mousemove', move);
+  });
+}
+
+function MinesweeperApp() {
+  const MinesweeperIcon = "./src/assets/Win98Icons/campo-minado.png"
+  return(
+    <>
+    <div className="minesweeperContainer">
+      <div className="defaultWin98NavBar mines">
+      <img className="minesweeperIconNav"src={MinesweeperIcon}/>
+      <span className="minesweeperAdress">Campo Minado</span>
+      <button className="closeButtonDefaultWin98" onClick={KillMinesApp}><img src={CloseIconWin98}/></button>
+      <button className="maximizeButtonDefaultWin98 minesweeper"><img src={MaximizeIconWin98}/></button>
+      <button className="minimizeButtonDefaultWin98 minesweeper" onClick={MinimizeMinesweeperApp}><img src={MinimizeIconWin98}/></button>
+    </div>
+    <iframe className="minesweeperIframe" src="https://98.js.org/programs/minesweeper/index.html"/>
+  </div>
+    </>
+  )
+}
+
+function MinimizeMinesweeperApp() {
+  const targetMinimizeMines = document.querySelector('.minesweeperContainer')
+  const targetSlotMines = document.querySelector('.slotContainer.mines')
+  const tergetAnimateMines = document.querySelector('.defaultWin98NavBar.mines')
+
+  const targetRefreshMines = document.querySelector(".minesweeperIframe")
+  const defaultURLMines = "https://98.js.org/programs/minesweeper/index.html"
+  targetRefreshMines.src = defaultURLMines
+
+  if (targetMinimizeMines.style.display === 'block') {
+    targetMinimizeMines.style.display = 'none'
+    targetSlotMines.style.borderTopColor = "#ffffff"
+    targetSlotMines.style.borderLeftColor = "#ffffff"
+    targetSlotMines.style.borderRightColor = "#000000"
+    targetSlotMines.style.borderBottomColor = "#000000"
+    targetSlotMines.style.background = '#b1b1b1'
+    tergetAnimateMines.classList.remove("appBarOpen")
+    tergetAnimateMines.classList.add("appBarClose")
+  } else {
+    targetMinimizeMines.style.display = 'block'
+    targetSlotMines.style.display = 'block'
+    targetSlotMines.style.borderTopColor = "#000000"
+    targetSlotMines.style.borderLeftColor = "#000000"
+    targetSlotMines.style.borderRightColor = "#ffffff"
+    targetSlotMines.style.borderBottomColor = "#ffffff"
+    targetSlotMines.style.background = '#cccccc'
+    tergetAnimateMines.classList.remove("appBarClose")
+    tergetAnimateMines.classList.add("appBarOpen")
+  }
+}
+
+function KillMinesApp() {
+  const targetKillMines = document.querySelector('.minesweeperContainer')
+  const targetSlotKill = document.querySelector('.slotContainer.mines')
+
+  targetKillMines.style.display = 'none'
+  targetSlotKill.style.display = 'none'
+  const targetRefreshMines = document.querySelector(".minesweeperIframe")
+  const defaultURLMines = "https://98.js.org/programs/minesweeper/index.html"
+  targetRefreshMines.src = defaultURLMines
+}
+
+function ComputerApp() {
+  const DirectoryIcon = './src/assets/Win98Icons/diretorio.png'
+  const PasteIcon = "./src/assets/Win98Icons/pasta.png"
+  return(
+    <>
+    <div className="computerContainer">
+      <div className="defaultWin98NavBar">
+      <img src={DirectoryIcon} className="directoryIconNav"/>
+      <button className="closeButtonDefaultWin98"><img src={CloseIconWin98}/></button>
+      <button className="maximizeButtonDefaultWin98"><img src={MaximizeIconWin98}/></button>
+      <button className="minimizeButtonDefaultWin98"><img src={MinimizeIconWin98}/></button>
+      </div>
+      <div className="FunctionsNavBar computer">
+        <div className="addressExplorer computer">
+          <span>Endereço</span>
+          <div className="addressTarget computer">
+            <img src={DirectoryIcon}/>
+            <span>(C:)</span>
+          </div>
+        </div>
+      </div>
+      <div className="pasteContainer">
+      <div className="computerPasteIcons">
+        <img src={PasteIcon}/>
+        <div className="title">Audios</div>
+      </div>
+      <div className="computerPasteIcons">
+        <img src={PasteIcon}/>
+        <div className="title">Commands</div>
+      </div>
+      <div className="computerPasteIcons">
+        <img src={PasteIcon}/>
+        <div className="title">Dos</div>
+      </div>
+      <div className="computerPasteIcons">
+        <img src={PasteIcon}/>
+        <div className="title">Programas</div>
+      </div>
+      <div className="computerPasteIcons">
+        <img src={PasteIcon}/>
+        <div className="title">Windows</div>
+      </div>
+      </div>
+    </div>
+    </>
+  )
+}
 export default Windows98;
