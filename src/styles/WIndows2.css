@@ -10,7 +10,7 @@
     height: 100vh;
     background-color: #56e6ff;
     border: 7px solid gray;
-    
+    position: relative;
 }
     
 .system2{

@@ -14,16 +14,16 @@ function FirstWindow({ nome }) {
       </div>
       <SecondBox/>
       <ThirdBox/>
+      <Fontes/>
     </div>
   );
   function Paragraph({ text }) {
     return (
       <div>
         <p className="textOS">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-          exercitationem reiciendis earum, deserunt laboriosam, suscipit nemo
-          tempora a fugit quisquam eveniet obcaecati, maiores eum? Beatae ex
-          explicabo rem harum. Quia.
+          Nomes: Renan Dias Santos de Santana<br/>
+          <span>Yorran Gabriel Correa da Cruz</span>
+          <span className="sala">1°AMS</span>
         </p>
       </div>
     );
@@ -68,25 +68,35 @@ function ThirdBox() {
     <div className="container3">
     <h1 className="box3Title">Versões de Sistemas Operacionais</h1>
     <div className="buttonContainer">
-    <button className="osButtons conclued"><a href="/Windows1"><img src={Win1Logo}/>Windows 1.0</a></button>
-    <button className="osButtons conclued"><a href="/Windows2"><img src={Win1Logo}/>Windows 2.0</a></button>
-    <button className="osButtons conclued"><a href="/Windows3"><img src={Win3Logo}/>Windows 3.0</a></button>
-    <button className="osButtons notconclued"><a href="/Windows1"><img src={Win3Logo}/>Windows 95</a></button>
-    <button className="osButtons conclued"><a href="/Windows98"><img src={Win3Logo}/>Windows 98</a></button>
-    <button className="osButtons notconclued"><a href="/Windows1"><img src={Win2000Logo}/>Windows 2000</a></button>
-    <button className="osButtons notconclued"><a href="/Windows1"><img src={WinMeLogo}/>Windows ME e NT</a></button>
-    <button className="osButtons conclued"><a href="/Windows1"><img src={WinVistaLogo}/>Windows XP</a></button>
-    <button className="osButtons notconclued"><a href="/Windows1"><img src={WinVistaLogo}/>Windows VISTA</a></button>
-    <button className="osButtons conclued"><a href="/Windows1"><img src={WinVistaLogo}/>Windows 7</a></button>
-    <button className="osButtons"><a href="/Windows1"><img src={Win10Logo}/>Windows 8</a></button>
-    <button className="osButtons"><a href="/Windows1"><img src={Win10Logo}/>Windows 10</a></button>
-    <button className="osButtons notconclued"><a href="/Windows1"><img src={Win11Logo}/>Windows 11</a></button>
-    <button className="osButtons unix conclued"><a href="/Windows1"><img src={UnixLogo}/>Unix</a></button>
-    <button className="osButtons linux notconclued"><a href="/Windows1"><img src={LinuxLogo}/>Linux</a></button>
-    <button className="osButtons notconclued"><a href="/Windows1"><img src={MacLogo}/>MAC-OS</a></button>
+    <button className="osButtons"><a href="/Windows1"><img src={Win1Logo}/>Windows 1.0</a></button>
+    <button className="osButtons"><a href="/Windows2"><img src={Win1Logo}/>Windows 2.0</a></button>
+    <button className="osButtons"><a href="/Windows3"><img src={Win3Logo}/>Windows 3.0</a></button>
+    <button className="osButtons"><a href="/Windows95"><img src={Win3Logo}/>Windows 95</a></button>
+    <button className="osButtons"><a href="/WindowsNT"><img src={WinMeLogo}/>Windows ME e NT</a></button>
+    <button className="osButtons"><a href="/Windows98"><img src={Win3Logo}/>Windows 98</a></button>
+    <button className="osButtons"><a href="/Windows2000"><img src={Win2000Logo}/>Windows 2000</a></button>
+    <button className="osButtons"><a href="/WindowsXP"><img src={WinVistaLogo}/>Windows XP</a></button>
+    <button className="osButtons"><a href="/WindowsVista"><img src={WinVistaLogo}/>Windows VISTA</a></button>
+    <button className="osButtons"><a href="/Windows7"><img src={WinVistaLogo}/>Windows 7</a></button>
+    <button className="osButtons"><a href="/Windows8"><img src={Win10Logo}/>Windows 8</a></button>
+    <button className="osButtons"><a href="/Windows10"><img src={Win10Logo}/>Windows 10</a></button>
+    <button className="osButtons"><a href="/Windows11"><img src={Win11Logo}/>Windows 11</a></button>
+    <button className="osButtons unix"><a href="/Unix"><img src={UnixLogo}/>Unix</a></button>
+    <button className="osButtons linux"><a href="/Linux"><img src={LinuxLogo}/>Linux</a></button>
+    <button className="osButtons"><a href="/Mac"><img src={MacLogo}/>MAC-OS</a></button>
     </div>
     </div>
     </>
+  )
+}
+
+function Fontes(){
+  return(
+    <div className="footer">
+      <button className="fonte1"><a href="https://winworldpc.com/home">WinWorldPC</a></button>
+      <button className="fonte2"><a href="https://cin.ufpe.br/~bfp/Arquivos/3196_Sistemas%20Operacionais.pdf">UFPE Pdf</a></button>
+      <button className="fonte3"><a href="https://www.tecmundo.com.br/windows-10/64136-windows-1-windows-10-29-anos-evolucao-do-so-microsoft.htm">Tech Mundo</a></button>
+    </div>
   )
 }
 

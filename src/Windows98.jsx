@@ -101,7 +101,7 @@ function Windows98() {
             <img src={RecicleIcon} />
             <span>Lixeira</span>
           </div>
-          <div className="ComputerIcon">
+          <div className="ComputerIcon" onDoubleClick={MinimizeComputerApp}>
             <img src={ComputerIcon} />
             <span>Computador</span>
           </div>
@@ -329,14 +329,43 @@ function KillMinesApp() {
 function ComputerApp() {
   const DirectoryIcon = './src/assets/Win98Icons/diretorio.png'
   const PasteIcon = "./src/assets/Win98Icons/pasta.png"
+  const TemplateIcon = "./src/assets/Win98Icons/template.png"
+  const SystemIconSheet = './src/assets/Win98Icons/arquivo-windows.png'
+  const ConfigComandIcon = './src/assets/Win98Icons/comand-config.png'
+  const MinesweeperIcon = "./src/assets/Win98Icons/campo-minado.png"
+  const InternetExplorerIcon = "./src/assets/Win98Icons/explorer.png"
+  const DefaultArrow98 = './src/assets/Win98Icons/arrow.png'
+
+  function ResetComputerApp() {
+    document.querySelector(".directoryScreenName").innerHTML = '(C:)'
+    document.querySelector(".mainIconComputer").src = DirectoryIcon
+    const targetDirectoryC = document.querySelector(".directoryCIcons")
+    const targetProgramFiles = document.querySelector(".programFilesIcons")
+    targetDirectoryC.style.display = 'block'
+    targetProgramFiles.style.display = 'none'
+  }
+
+  function PasteProgramDisplay() {
+    document.querySelector(".directoryScreenName").innerHTML = 'Programas'
+    document.querySelector(".mainIconComputer").src = PasteIcon
+    const targetDirectoryC = document.querySelector(".directoryCIcons")
+    const targetProgramFiles = document.querySelector(".programFilesIcons")
+    targetDirectoryC.style.display = 'none'
+    targetProgramFiles.style.display = 'block'
+  }
+
   return(
     <>
     <div className="computerContainer">
-      <div className="defaultWin98NavBar">
+      <div className="defaultWin98NavBar computer">
       <img src={DirectoryIcon} className="directoryIconNav"/>
-      <button className="closeButtonDefaultWin98"><img src={CloseIconWin98}/></button>
+        <div className="arrowBack98" onClick={ResetComputerApp}>
+          <img src={DefaultArrow98}/>
+          <div className="backTitle">Início</div>
+        </div>
+      <button className="closeButtonDefaultWin98" onClick={KillComputerApp}><img src={CloseIconWin98}/></button>
       <button className="maximizeButtonDefaultWin98"><img src={MaximizeIconWin98}/></button>
-      <button className="minimizeButtonDefaultWin98"><img src={MinimizeIconWin98}/></button>
+      <button className="minimizeButtonDefaultWin98" onClick={MinimizeComputerApp}><img src={MinimizeIconWin98}/></button>
       </div>
       <div className="FunctionsNavBar computer">
         <div className="addressExplorer computer">
@@ -347,30 +376,91 @@ function ComputerApp() {
           </div>
         </div>
       </div>
-      <div className="pasteContainer">
-      <div className="computerPasteIcons">
-        <img src={PasteIcon}/>
-        <div className="title">Audios</div>
+      <img className="mainIconComputer" src={DirectoryIcon}/>
+      <h1 className="directoryScreenName">(C:)</h1>
+      <div className="divisorBarComputer"></div>
+      <div className="directoryCIcons">
+        <div className="pasteContainer">
+          <div className="computerPasteIcons">
+            <img src={PasteIcon}/>
+            <div className="title">Commands</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={PasteIcon}/>
+            <div className="title">Win98</div>
+          </div>
+          <div className="computerPasteIcons" onClick={PasteProgramDisplay}>
+            <img src={PasteIcon}/>
+            <div className="title">Programas</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={PasteIcon}/>
+            <div className="title">Windows</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={PasteIcon}/>
+            <div className="title">Documentos</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={TemplateIcon}/>
+            <div className="title">Netlog</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={TemplateIcon}/>
+            <div className="title">Systemlog</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={SystemIconSheet}/>
+            <div className="title">Oemrom.bin</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={SystemIconSheet}/>
+            <div className="title">Scandisk.log</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={SystemIconSheet}/>
+            <div className="title">Win.config</div>
+          </div>
+          <div className="computerPasteIcons">
+            <img src={ConfigComandIcon}/>
+            <div className="title">Autoexec</div>
+          </div>
+        </div>
       </div>
-      <div className="computerPasteIcons">
-        <img src={PasteIcon}/>
-        <div className="title">Commands</div>
-      </div>
-      <div className="computerPasteIcons">
-        <img src={PasteIcon}/>
-        <div className="title">Dos</div>
-      </div>
-      <div className="computerPasteIcons">
-        <img src={PasteIcon}/>
-        <div className="title">Programas</div>
-      </div>
-      <div className="computerPasteIcons">
-        <img src={PasteIcon}/>
-        <div className="title">Windows</div>
-      </div>
+      <div className="programFilesIcons">
+        <div className="pasteContainer">
+          <div className="computerProgramFilesIcon" onDoubleClick={MinimizeMinesweeperApp}>
+            <img src={MinesweeperIcon}/>
+            <div className="title">Campo Minado</div>
+          </div>
+          <div className="computerProgramFilesIcon" onDoubleClick={MinimizeExplorerApp}>
+            <img src={InternetExplorerIcon}/>
+            <div className="title">Explorer</div>
+          </div>
+        </div>
       </div>
     </div>
     </>
   )
+  function KillComputerApp() {
+    const targetKillComputer = document.querySelector(".computerContainer")
+
+    targetKillComputer.style.display = 'none'
+  }
+}
+
+function MinimizeComputerApp() {
+  const targetMinimizeComputer = document.querySelector('.computerContainer')
+  const targetAnimateComputer = document.querySelector('.defaultWin98NavBar.computer')
+
+  if (targetMinimizeComputer.style.display === 'block') {
+    targetMinimizeComputer.style.display = 'none'
+    targetAnimateComputer.classList.remove("appBarOpen")
+    targetAnimateComputer.classList.add("appBarClose")
+  } else {
+    targetMinimizeComputer.style.display = 'block'
+    targetAnimateComputer.classList.remove("appBarClose")
+    targetAnimateComputer.classList.add("appBarOpen")
+  }
 }
 export default Windows98;

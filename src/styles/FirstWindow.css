@@ -12,7 +12,7 @@
 }
 
 .mainTitleOS {
-  width: auto;
+  width: 50vw;
   height: auto;
   position: absolute;
   top: 50%;
@@ -26,6 +26,7 @@
   backdrop-filter: blur(5px);
   font-family: "Ubuntu", sans-serif;
   margin-top: 100px;
+  padding: 10px 10px;
 }
 
 .titleOS {
@@ -41,7 +42,18 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 5px;
+  margin-top: 50px;
   text-align: justify;
+  font-size: 20px;
+}
+
+.textOS span{
+  margin-left: 70px;
+}
+
+.sala{
+  position: absolute;
+  right: 20px;
 }
 
 .container2{
@@ -147,7 +159,7 @@
   top: -.6%;
   width: auto;
   height: 100vh;
-  background-color: #fff;
+  background-color: #181818;
 }
 
 .box3Title{
@@ -156,30 +168,71 @@
   left: 20%;
   font-family: "Ubuntu", sans-serif;
   font-size: 50px;
-  color: #181818;
+  color: #fff;
   font-weight: bold;
 }
 
 .buttonContainer{
   position: absolute;
   align-items: center;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75vw;
   height: 65vh;
-  background-color: #035099;
+  background-color: transparent;
+  border: 2.5px solid;
+  border-radius: 10px;
+  animation: moveborder 2.5s ease-in-out infinite;
+}
+
+@keyframes moveborder{
+  0%{
+      border-top-color: #06c7ce;
+      border-left-color: #037b99;
+      border-bottom-color: #8f06ce;
+      border-right-color: #035099;
+      transition: all 1s;
+  }
+  25%{
+      border-top-color: #037b99;
+      border-left-color: #8f06ce;
+      border-bottom-color: #035099;
+      border-right-color: #06c7ce;
+  }
+  50%{
+      border-top-color: #8f06ce;
+      border-left-color: #035099;
+      border-bottom-color: #06c7ce;
+      border-right-color: #037b99;
+  }
+  75%{
+      border-top-color: #037b99;
+      border-left-color: #06c7ce;
+      border-bottom-color: #035099;
+      border-right-color: #8f06ce;
+  }
+  100%{
+      border-top-color: #06c7ce;
+      border-left-color: #037b99;
+      border-bottom-color: #8f06ce;
+      border-right-color: #035099;
+  }
 }
 
 .osButtons{
   position: relative;
   top: 5%;
   width: 15vw;
-  height: auto;
+  height: 12vh;
   padding: 10px 10px;
   margin: 10px 25px;
   border-radius: 10px;
   border: none;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: .5s;
 }
 
 .osButtons a{
@@ -192,7 +245,6 @@
   font-weight: 500;
   font-size: 15px;
 }
-
 
 .osButtons img{
   width: 48px;
@@ -207,10 +259,70 @@
   width: 28px;
 }
 
-.osButtons.conclued{
-  background-color: green;
+.osButtons::before {
+  content: '';
+  width: 0;
+  height: 12vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #00ccff 0%, #0066ff 100%);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+.osButtons:hover, .osButtons a:hover{
+  color: #fff;
+  transform: scale(1.1);
 }
 
-.osButtons.notconclued{
-  background-color: red;
+.osButtons:hover::before {
+  width: 15vw;
+ }
+
+.footer{
+  position: relative;
+  bottom: 0;
+  width: auto;
+  height: 10vh;
+  background-color: #585858;
+}
+
+.fonte1{
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  padding: 10px 10px;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.footer button a{
+  color: #181818;
+  text-decoration: none;
+}
+
+.fonte2{
+  top: 20%;
+  padding: 10px 10px;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: 10%;
+}
+
+.fonte3{
+  top: 20%;
+  padding: 10px 10px;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  position: absolute;
+  left: 16.5%;
 }

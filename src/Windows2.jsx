@@ -223,12 +223,12 @@ function SystemHeader2() {
           </div>
         </div>
         <div className="chkdskItems2">
-          <li>360000 bytes espaço total do disco</li>
+          <li>720000 bytes espaço total do disco</li>
           <li>17638 bytes em 2 arquivos ocultos</li>
           <li>206241 bytes em 22 arquivos do usuário</li>
           <li><br /></li>
-          <li>509613 bytes memória total</li>
-          <li>136121 bytes livres</li>
+          <li>512000 bytes memória total</li>
+          <li>496121 bytes livres</li>
         </div>
       </div>
       </>
@@ -352,6 +352,7 @@ function SystemHeader2() {
 
 function WindowsHide(){
     const targetWindows = document.querySelector(".windowsEXE")
+    const win2HeaderTarget = document.querySelector(".aquaTarget")
     const windowsDirectory = document.querySelector(".windowsDirectory")
     const aplications2 = document.querySelector(".aplications2")
     const aplications21 = document.querySelector(".aplications2-1")
@@ -361,11 +362,13 @@ function WindowsHide(){
         windowsDirectory.style.display = 'none'
         aplications2.style.display = 'block'
         aplications21.style.display = 'block'
+        win2HeaderTarget.style.display = 'block'
     } else {
         targetWindows.style.display = 'block'
         windowsDirectory.style.display = 'block'
         aplications2.style.display = 'none'
         aplications21.style.display = 'none'
+        win2HeaderTarget.style.display = 'none'
     }
 
 }
