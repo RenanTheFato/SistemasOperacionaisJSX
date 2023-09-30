@@ -1,0 +1,911 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+.banner{
+    position: relative;
+    width: auto;
+    height: 30vh;
+    background-color: #181818;
+    box-shadow: 0 0.1rem 0.5rem #00ccff;
+    z-index: 3;
+}
+
+.banner.Unix{
+    box-shadow: 0 0.1rem 0.5rem #06ce49;
+}
+
+.banner.Linux{
+    box-shadow: 0 0.1rem 0.5rem #c1f03f;
+}
+
+.banner.Mac{
+    box-shadow: 0 0.1rem 0.5rem #f0c13f;
+}
+
+.arrowBack{
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    width: 80px;
+    cursor: pointer;
+    opacity: 0.5;
+    transform: rotate(270deg);
+}
+
+.arrowForward{
+    position: absolute;
+    right: 2%;
+    top: 30%;
+    width: 80px;
+    cursor: pointer;
+    opacity: 0.5;
+    transform: rotate(90deg);
+}
+
+.arrowBack:hover,.arrowForward:hover{
+    opacity: 1;
+}
+
+.osName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 75px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.osContainer{
+    position: relative;
+    width: auto;
+    height: 70vh;
+    background-color: #181818;
+    z-index: 2;
+}
+
+.textContainer1{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 45vw;
+    height: auto;
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: 10px;
+    animation: moveborder 2.5s ease-in-out infinite;
+}
+.textContainer1.Unix{
+    animation: moveborderUnix 2.5s ease infinite;
+    top: 20%;
+}
+
+.textContainer1.Linux{
+    animation: moveborderLinux 2.5s ease infinite;
+    top: 20%;
+    left: 27%;
+}
+
+.textContainer1.Mac{
+    animation: moveborderMac 2.5s ease infinite;
+    top: 10%;
+    left: 27%;
+}
+
+.textContainer1.Windows1{
+    top: 20%;
+}
+
+.textContainer1.Windows2{
+    top: 20%;
+}
+
+.textContainer1.Windows3{
+    top: 25%;
+}
+
+.textContainer1.WindowsVista{
+    top: 15%;
+}
+
+@keyframes moveborder{
+    0%{
+        border-top-color: #06c7ce;
+        border-left-color: #037b99;
+        border-bottom-color: #8f06ce;
+        border-right-color: #035099;
+        transition: all 1s;
+    }
+    25%{
+        border-top-color: #037b99;
+        border-left-color: #8f06ce;
+        border-bottom-color: #035099;
+        border-right-color: #06c7ce;
+    }
+    50%{
+        border-top-color: #8f06ce;
+        border-left-color: #035099;
+        border-bottom-color: #06c7ce;
+        border-right-color: #037b99;
+    }
+    75%{
+        border-top-color: #037b99;
+        border-left-color: #06c7ce;
+        border-bottom-color: #035099;
+        border-right-color: #8f06ce;
+    }
+    100%{
+        border-top-color: #06c7ce;
+        border-left-color: #037b99;
+        border-bottom-color: #8f06ce;
+        border-right-color: #035099;
+    }
+}
+
+@keyframes moveborderUnix{
+    0%{
+        border-top-color: #06ce49;
+        border-left-color: #0c5810;
+        border-bottom-color: #003304;
+        border-right-color: #0d7e20;
+        transition: all 1s;
+    }
+    25%{
+        border-top-color: #0c5810;
+        border-left-color: #003304;
+        border-bottom-color: #0d7e20;
+        border-right-color: #06ce49;
+    }
+    50%{
+        border-top-color: #003304;
+        border-left-color: #0d7e20;
+        border-bottom-color: #06ce49;
+        border-right-color: #0c5810;
+    }
+    75%{
+        border-top-color: #0c5810;
+        border-left-color: #06ce49;
+        border-bottom-color: #0d7e20;
+        border-right-color: #003304;
+    }
+    100%{
+        border-top-color: #06ce49;
+        border-left-color: #0c5810;
+        border-bottom-color: #003304;
+        border-right-color: #0d7e20;
+    }
+}
+
+@keyframes moveborderLinux{
+    0%{
+        border-top-color: #c1f03f;
+        border-left-color: #53580c;
+        border-bottom-color: #2e3300;
+        border-right-color: #6d7e0d;
+        transition: all 1s;
+    }
+    25%{
+        border-top-color: #53580c;
+        border-left-color: #2e3300;
+        border-bottom-color: #6d7e0d;
+        border-right-color: #c1f03f;
+    }
+    50%{
+        border-top-color: #2e3300;
+        border-left-color: #6d7e0d;
+        border-bottom-color: #c1f03f;
+        border-right-color: #53580c;
+    }
+    75%{
+        border-top-color: #53580c;
+        border-left-color: #c1f03f;
+        border-bottom-color: #6d7e0d;
+        border-right-color: #2e3300;
+    }
+    100%{
+        border-top-color: #c1f03f;
+        border-left-color: #53580c;
+        border-bottom-color: #2e3300;
+        border-right-color: #6d7e0d;
+    }
+}
+
+@keyframes moveborderMac{
+    0%{
+        border-top-color: #f0c13f;
+        border-left-color: #c28b14;
+        border-bottom-color: #5f3806;
+        border-right-color: #7e490d;
+        transition: all 1s;
+    }
+    25%{
+        border-top-color: #c28b14;
+        border-left-color: #5f3806;
+        border-bottom-color: #7e490d;
+        border-right-color: #f0c13f;
+    }
+    50%{
+        border-top-color: #5f3806;
+        border-left-color: #7e490d;
+        border-bottom-color: #f0c13f;
+        border-right-color: #c28b14;
+    }
+    75%{
+        border-top-color: #c28b14;
+        border-left-color: #f0c13f;
+        border-bottom-color: #7e490d;
+        border-right-color: #5f3806;
+    }
+    100%{
+        border-top-color: #f0c13f;
+        border-left-color: #c28b14;
+        border-bottom-color: #5f3806;
+        border-right-color: #7e490d;
+    }
+}
+
+.textContainer1 p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.textContainer3{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 45vw;
+    height: auto;
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: 10px;
+    animation: moveborder 2.5s ease-in-out infinite;
+    display: none;
+}
+
+.textContainer3 p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.textContainer2{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    width: 45vw;
+    height: auto;
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: 10px;
+    animation: moveborder 2.5s ease-in-out infinite;
+}
+
+.textContainer2.Windows2{
+    top: 35%;
+}
+
+.textContainer2 h1{
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 35px;
+}
+
+.textContainer2 p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.computerImage{
+    position: absolute;
+    width: 450px;
+    right: 10%;
+    top: 15%;
+    padding: 10px 10px;
+    border-bottom: 4px solid #00ccff;
+    border-radius: 10px;
+    animation: moveborder 2.5s ease-in-out infinite;
+}
+
+.computerImage.Windows3{
+    top: 10%;
+    width: 350px;
+}
+
+.computerImage.Windows95{
+    top: 10%;
+    width: 350px;
+}
+
+.computerImage.WindowsMe{
+    top: 15%;
+    right: 7%;
+    width: 500px;
+}
+
+.computerImage.WindowsVista{
+    width: 400px;
+}
+
+.computerImage.Windows10{
+    width: 400px;
+    top: 0;
+}
+
+.computerImage.Unix{
+    width: 400px;
+    animation: moveborderUnix 2.5s ease-in-out infinite;
+}
+
+
+.divisionWarn{
+    position: relative;
+    width: auto;
+    height: 10vh;
+    background-color: #181818;
+    margin-bottom: 2px;
+    box-shadow: inset 0px 8px 6px -6px #142b5e;
+}
+
+.divisionWarn.Unix{
+    box-shadow: inset 0px 8px 6px -6px #003304;
+}
+
+.divisionWarn.Linux{
+    box-shadow: inset 0px 8px 6px -6px #656e0d;
+}
+
+.divisionWarn.Mac{
+    box-shadow: inset 0px 8px 6px -6px #6e470d;
+}
+
+.divisionWarn h1{
+    position: relative;
+    top: 20%;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 35px;
+    color: #fff;
+}
+
+.important{
+    color: #0073c5;
+}
+
+.important2{
+    color: #c1f03f;
+}
+
+.textContainer2 p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.curiosityHandle{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    height: 6vh;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+}
+
+.curiosityContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+    background-color: #ffffff;
+    border: 1px solid black;
+    z-index: 3;
+    display: none;
+}
+
+.curiosityContainer.Windows98{
+    background-color: #1e7554;
+}
+
+.curiosityContainer.WindowsME{
+    background-color: #3B6EA5;
+}
+
+.curiosityContainer.WindowsXP{
+    background-image: url(./src/PageComponents/PageImages/windowsxpbg.jpg);
+    background-size: cover;
+}
+
+.curiosityContainer.WindowsVista{
+    background-image: url(./src/PageComponents/PageImages/windowsvistabg.jpg);
+    background-size: cover;
+}
+
+.curiosityContainer.Windows7{
+    background-image: url(./src/PageComponents/PageImages/windows7bg.jpg);
+    background-size: cover;
+}
+
+.curiosityHeader{
+    width: auto;
+    height: 4vh;
+}
+
+.curiosityHeader.Windows1{
+    border-bottom: 1px solid black;
+    background-color: #5757d1;
+}
+
+.curiosityHeader.Windows3{
+    background-color: #001da0 ;
+}
+
+.curiosityHeader.Windows98{
+    background: linear-gradient(90deg, #040055 0%, #4747c4 100%);
+}
+
+.curiosityHeader.WindowsME{
+    background: linear-gradient(90deg, #171363 0%, #6666e0 100%);
+}
+
+.curiosityHeader.WindowsXP{
+    background-color: #5271ff;
+    border-bottom: 2px solid black;
+}
+
+.curiosityHeader.WindowsVista{
+    background-color: #000000a9;
+    border-bottom: 2px solid black;
+}
+
+.curiosityHeader.Windows7{
+    background-color: #5b6cb9;
+    border-bottom: 2px solid black;
+}
+
+.curiosityTitle{
+    position: relative;
+    text-align: center;
+}
+
+.curiosityTitle.Windows1{
+    color: #fff;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-weight: 100;
+}
+
+.curiosityTitle.Windows98{
+    font-size: 25px;
+    position: absolute;
+    top: 0.5%;
+    left: 5%;
+    color: #ffffff;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-weight: 100;
+}
+
+.curiosityTitle.WindowsXP{
+    font-size: 25px;
+    position: absolute;
+    top: -0.5%;
+    left: 5%;
+    color: #ffffff;
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    -webkit-font-smoothing: none;  
+    -moz-osx-font-smoothing: grayscale; 
+    font-weight: 100;
+}
+
+.curiosityLogo.Windows98{
+    position: absolute;
+    left: 1%;
+    width: 25px;
+}
+
+.curiosityLogo.WindowsXP{
+    position: absolute;
+    left: -1%;
+    width: 50px;
+}
+
+.navBar.Windows98{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    border: 2px solid;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7b7b7b;
+    border-bottom-color: #7b7b7b;
+    background-color: #b1b1b1;
+}
+
+.navBar.WindowsXP{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    border: 2px solid;
+    border-radius: 5px;
+    border-left-color: #5465ff;
+    border-top-color: #5465ff;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    background-color: #3134eb;
+}
+
+.navBar.WindowsVista{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    border: 2px solid;
+    border-radius: 5px;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
+    border-top-color: #8a8a8a;
+    border-left-color: #8a8a8a;
+    background-color: #0a0a0a9a;
+}
+
+.navBar.Windows7{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: #686868d5;
+}
+
+.curiosityTextBox{
+    position: absolute;
+    background-color: transparent;
+    width: 30vw;
+    height: auto;
+    right: 5%;
+    top: 25%;
+}
+
+.curiosityTextBox.Windows1{
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-weight: 100;
+}
+
+.curiosityTextBox.Windows98{
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Fixedsys 62', sans-serif;
+    font-weight: 100;
+    color: #fff;
+}
+
+.curiosityTextBox.WindowsME{
+    position: absolute;
+    top: 20%;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    -webkit-font-smoothing: none;  
+    -moz-osx-font-smoothing: grayscale; 
+    font-weight: 100;
+    color: #fff;
+}
+
+.curiosityTextBox.WindowsXP{
+    position: absolute;
+    top: 15%;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    -webkit-font-smoothing: none;  
+    -moz-osx-font-smoothing: grayscale; 
+    font-weight: 100;
+    background-color: #6666e0;
+    color: #fff;
+    border-radius: 10px 10px 5px 5px;
+    padding: 10px 20px;
+}
+
+.curiosityTextBox.WindowsVista{
+    position: absolute;
+    top: 20%;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    -webkit-font-smoothing: none;  
+    -moz-osx-font-smoothing: grayscale; 
+    font-weight: 100;
+    background-color: #5353539d;
+    color: #fff;
+    border-radius: 10px 10px 5px 5px;
+    padding: 10px 20px;
+}
+
+.curiosityTextBox.Windows7{
+    position: absolute;
+    top: 20%;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Microsoft Sans Serif', sans-serif;
+    -webkit-font-smoothing: none;  
+    -moz-osx-font-smoothing: grayscale; 
+    font-weight: 100;
+    background-color: #537ba09d;
+    color: #fff;
+    border-radius: 10px 10px 5px 5px;
+    padding: 10px 20px;
+}
+
+.curiositySystemLogo{
+    position: absolute;
+    top: 25%;
+    left: -45%;
+}
+
+.curiositySystemLogo.Windows1{
+    width: 128px;
+}
+
+.closeCuriosity{
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    right: 1%;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.slider.WindowsNT{
+    background-color: #018281;
+}
+
+.slider.Windows2000{
+    background-color: #3B6EA5;
+}
+
+.slider.WindowsXP{
+    background-image: url(./src/PageComponents/PageImages/windowsxpbg.jpg);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.WindowsVista{
+    background-image: url(./src/PageComponents/PageImages/windowsvistabg.jpg);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.Windows7{
+    background-image: url(./src/PageComponents/PageImages/windows7bg.jpg);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.Windows8{
+    background-image: url(./src/PageComponents/PageImages/windows8bg.png);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.Windows10{
+    background-image: url(./src/PageComponents/PageImages/windows10bg.png);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.Windows11{
+    background-image: url(./src/PageComponents/PageImages/Windows11bg.jpg);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.Unix{
+    background-image: url(./src/PageComponents/PageImages/unixbg.jpg);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.Linux{
+    background-image: url(./src/PageComponents/PageImages/linuxbg.jpg);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slider.Mac{
+    background-image: url(./src/PageComponents/PageImages/macbg.jpg);
+    background-size: cover;
+    background-color: #18181880;
+    background-blend-mode: multiply;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    left: 22%;
+    top: 5%;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 750px;
+    border-radius: 10px;
+}
+
+
+.slide.WindowsXP img{
+    top: 2%;
+    position: absolute;
+}
+
+.slide.WindowsVista img{
+    position: absolute;
+    left: -8.5%;
+    width: 1000px;
+}
+
+.slide.WindowsVista2 img{
+    position: absolute;
+    left: -7%;
+    width: 950px;
+}
+
+.slide.Windows7 img{
+    position: absolute;
+    left: -5%;
+    width: 900px;
+}
+
+.slide.Windows72 img{
+    position: absolute;
+    left: -4%;
+    width: 850px;
+}
+
+.slide.Windows8 img{
+    position: absolute;
+    top: -5%;
+    width: 750px;
+}
+
+.slide.Windows82 img{
+    position: absolute;
+    left: -9%;
+    width: 1000px;
+}
+
+.slide.Windows10 img{
+    position: absolute;
+    left: -13%;
+    width: 1100px;
+}
+
+.slide.Windows11 img{
+    position: absolute;
+    left: -4%;
+    width: 900px;
+}
+
+.slide.Windows112 img{
+    position: absolute;
+    left: -8%;
+    width: 1000px;
+}
+
+.slide.Unix img{
+    position: absolute;
+    top: 10%;
+    left: -8%;
+    width: 1000px;
+}
+
+.slide.Unix2 img{
+    position: absolute;
+    left: 7%;
+    width: 550px;
+}
+
+.slide.Ubuntu img{
+    position: absolute;
+    left: -4%;
+    width: 850px;
+}
+
+.slide.Mac img{
+    position: absolute;
+    left: -6%;
+    width: 900px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    left: 20%;
+    bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    position: relative;
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+.changeContainer{
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: transparent;
+}
